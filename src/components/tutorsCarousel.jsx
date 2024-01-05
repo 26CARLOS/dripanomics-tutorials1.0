@@ -7,6 +7,8 @@ import Reitumetse from '../assets/Reitumetse.jpg';
 import Joachim from '../assets/Joachim.jpg';
 import Remofilwe from '../assets/Remofilwe.jpg';
 import Zandile from '../assets/Zandile.jpg';
+import Lindokuhle from '../assets/Lindokuhle.jpg';
+import Miesie from '../assets/Miesie.jpg';
 
 
 const Tutors =[
@@ -51,6 +53,18 @@ const Tutors =[
     modules:'Marketing 1A&1B',
     bio:'As a Top achiever in consumer studies from my previous high school it sparked an interest in me to apply for the Marketing. As an aspiring chef and a BCom in marketing management student at the University of JOHANNESBURG, I acquired fundamental knowledge of consumer behavior. Consumer Studies has enabled me with the practical abilities to market and produce different products and to think critically as a consumer.I am currently pursuing a skills development program in Excel training at one of the UJ libraries to the benefit of enhancing my computer skills and becoming more technologically savvy which I believe will be valuable to the internship.In the overpopulated and challenging business world, to effectively overcome rivals and any other difficulties, you must care about what you do. As the ideal candidate, I see myself as someone who is eager to take on challenges and wants to be prepared with the required abilities to do so.',
     },
+
+    {profileImage:Lindokuhle,
+    name:'Lindokuhle',
+    modules:'Business Information Systems 2A&2b and Accounting 2A&2B',
+    bio:'I am Lindokuhle, and I see tutoring as a profound learning experience where I share academic insights and strategies for growth. As an aspiring serial entrepreneur, this venture is my initial step towards refining crucial skills like effective communication and persuasion. While acknowledging imperfections, particularly in time management, I recognize this tutoring opportunity as a chance to contribute to something greater than myself. With confidence as my ally, I approach challenges optimistically, viewing failure not as a setback but a stepping stone for improvement. I embrace the chance to stumble and learn in front of others, understanding it is through these experiences that true growth occurs.',
+    },
+
+    {profileImage:Miesie,
+    name:'Miesie Moloto',
+    modules:'',
+    bio:'I am Miesie Moloto, a Golden Key recipient committed to academic excellence. With a cum laude degree and proficiency in Microsoft PowerPoint and Word, I offer guidance in creating impactful presentations and refining document creation skills. My tutoring philosophy prioritizes a collaborative and supportive learning environment, aiming to instill values of leadership and excellence in students. Excited about the opportunity, I look forward to mutual growth in navigating academics and enhancing computer proficiency.',
+    }
 ]
 
 
