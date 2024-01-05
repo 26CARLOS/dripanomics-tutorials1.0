@@ -18,7 +18,7 @@ const closeMobileNav =() =>{
     <div className='flex flex-wrap justify-between items-center h-24 max-w-[1480px] mx-auto px-4 text-black'>
         <Link to="/">
             <div className='flex flex-row items-center justify-center'>
-                <img src={logo} alt="Dripanomics Tutorials logo." className='hidden md:block'/><h1 className=' font-semibold md:text-3xl text-black'>Dripanomics Tutorials.</h1>
+                <img src={logo} alt="Dripanomics Tutorials logo." className='hidden md:block'/><h1 className=' font-bold md:text-3xl text-black'>Dripanomics Tutorials.</h1>
             </div>
         </Link>
 
