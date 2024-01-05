@@ -12,8 +12,8 @@ import Zandile from '../assets/Zandile.jpg';
 const Tutors =[
     {profileImage:Remofilwe,
         name:'Remofilwe Sekgobela',
-        modules:'CEO & Founder',
-        bio:'',
+        modules:'Accounting 1A & Accounting 1B',
+        bio:'I am Remofilwe Kagiso Sekgobela, founder and CEO of Dripanomics Tutorials, and a former top-performing matric student at Curro Academy Pretoria in 2021. Despite challenges like Covid-19 restrictions and load shedding, I achieved academic excellence, securing a fully paid bursary for 2022-2024. As a dedicated and results-driven educator, I have a proven track record in fostering academic excellence, particularly in accounting. My success lies in providing targeted support to struggling students, facilitating a deeper understanding of complex concepts. I hold distinctions in my BCom in Business Management from the University of Johannesburg, reflecting my commitment to academic achievement. I possess strong communication, conflict management, planning, organizing, and writing skills, making me an ideal candidate for any business or academic opportunity.',
     },
 
     {profileImage:Asonele,
@@ -85,6 +85,7 @@ return(
                     <img className='rounded-full object-cover w-20 h-20' src={Tutors[currentIndex].profileImage} alt=''/>
                 </div>
                 <h2 onClick={toggleShowBio} className='text-sm md:text-2xl font-medium text-center py-8 cursor-pointer'>{Tutors[currentIndex].name}</h2>
+                {currentIndex===0 ? <p className='text-sm'>Founder & Tutor</p>:<p className='text-sm'>Tutor</p>}
                 <p className='text-md py-2 border-b mx-8 mt-8 font-normal'>{Tutors[currentIndex].modules}</p>
             </div>
 
