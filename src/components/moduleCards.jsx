@@ -39,7 +39,7 @@ const ModuleCards = () => {
             <div className='flex flex-col items-center text-6xl'>
             <img src={Analytical} alt="Analytical Techniques" className='rounded-lg'/>
             </div>                
-            <h2 className='text-2xl font-bold text-center py-8'>Analytical Techniques 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Analytical Techniques 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
@@ -55,7 +55,7 @@ const ModuleCards = () => {
             <div className='flex flex-col items-center text-6xl'>       
                 <img src={Business} alt="Business Management" className='rounded-lg'/>
             </div>
-            <h2 className='text-2xl font-bold text-center py-8'>Business Management 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Business Management 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
@@ -63,7 +63,7 @@ const ModuleCards = () => {
             <img src={CompSci} alt="Computer Science" className='rounded-lg'/>
             </div>
             <div className=''>
-            <h2 className='text-2xl font-bold text-center py-8'>Computer Science 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Computer Science 1A/1B</h2>
             </div>               
         </div>
 
@@ -71,28 +71,28 @@ const ModuleCards = () => {
             <div className='flex flex-col items-center text-6xl'>
             <img src={Economics} alt="Economics" className='rounded-lg'/>
             </div>                
-            <h2 className='text-2xl font-bold text-center py-8'>Economics 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Economics 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
             <div className='flex flex-col items-center text-6xl'>
             <img src={FinMan} alt="Financial Management" className='rounded-lg'/>
             </div>                
-            <h2 className='text-2xl font-bold text-center py-8'>Financial-Management 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Financial-Management 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
             <div className='flex flex-col items-center text-6xl'>
             <img src={HR} alt="Human Resources" className='rounded-lg'/>
             </div>                
-            <h2 className='text-2xl font-bold text-center py-8'>Human Resource Management 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Human Resource Management 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
             <div className='flex flex-col items-center text-6xl'>
             <img src={Industrial} alt="Industrial Psychology" className='rounded-lg '/>
             </div>                
-            <h2 className='text-2xl font-bold text-center py-8'>Industrial Psychlogy 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Industrial Psychlogy 1A/1B</h2>
         </div>
 
         <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
@@ -100,7 +100,7 @@ const ModuleCards = () => {
             <img src={Marketing} alt="Marketing" className='rounded-lg'/>
             </div>                
             <div className=''>
-            <h2 className='text-2xl font-bold text-center py-8'>Marketing 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Marketing 1A/1B</h2>
             </div>          
         </div>
 
@@ -109,7 +109,7 @@ const ModuleCards = () => {
             <img src={Psychology} alt="Psychology" className='rounded-lg'/>
             </div>
             <div className=''>
-            <h2 className='text-2xl font-bold text-center py-8'>Psychology 1A/B</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Psychology 1A/1B</h2>
             </div>               
         </div>
 
@@ -136,7 +136,7 @@ const ModuleCards = () => {
             <img src={tax200} alt="Taxation" className='rounded-lg'/>
             </div>
             <div className=''>
-            <h2 className='text-2xl font-bold text-center py-8'>Taxation 200</h2>
+            <h2 className='text-2xl font-bold text-center py-8'>Taxation 200/2A/2B</h2>
             </div>               
         </div>
 

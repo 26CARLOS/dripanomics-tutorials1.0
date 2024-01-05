@@ -56,11 +56,16 @@ const GetTutorForm = () => {
                 <option>Accounting B</option>
                 <option>Accounting 1A</option>
                 <option>Accounting 1B</option>
+                <option>Accounting Studies 200</option>
                 <option>Analytical techniques 1A</option>
                 <option>Analytical techniques 1B</option>
                 <option>Business Management 1A</option>
                 <option>Business Management 1B</option>
+                <option>Computer Science 1A</option>
+                <option>Computer Science 1B</option>
                 <option>Economics 1A</option>
+                <option>Economics 2C</option>
+                <option>Economics 2D</option>
                 <option>Financial-Management 1A</option>
                 <option>Financial-Management 1B</option>
                 <option>Human Resource Management 1A</option>
@@ -71,6 +76,11 @@ const GetTutorForm = () => {
                 <option>Marketing 1B</option>
                 <option>Psychology 1A</option>
                 <option>Psychology 1B</option>
+                <option>Psychology 1B</option>
+                <option>Research Modules 2nd year</option>
+                <option>Taxation 200</option>
+                <option>Taxation 2A</option>
+                <option>Taxation 2B</option>
             </select>
             <button type="submit" className='bg-gray-400 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300'>Submit</button>
         </form>

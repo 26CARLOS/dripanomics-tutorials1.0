@@ -63,13 +63,13 @@ const Tutors =[
 
     {profileImage:Miesie,
     name:'Miesie Moloto',
-    modules:'',
+    modules:'Psychology 2C & Research Modules',
     bio:'I am Miesie Moloto, a Golden Key recipient committed to academic excellence. With a cum laude degree and proficiency in Microsoft PowerPoint and Word, I offer guidance in creating impactful presentations and refining document creation skills. My tutoring philosophy prioritizes a collaborative and supportive learning environment, aiming to instill values of leadership and excellence in students. Excited about the opportunity, I look forward to mutual growth in navigating academics and enhancing computer proficiency.',
     },
 
     {profileImage:Sphesihle,
     name:'Sphesihle Nkosi',
-    modules:'Economics 2B&2C',
+    modules:'Economics 2C&2D',
     bio:'I am Sphesihle Nkosi, a dedicated member of the Golden Key International Honour Society since 2022, driven by a commitment to academic excellence and a passion for nurturing talent. My adaptable approach ensures personalized tutoring sessions tailored to your unique learning style. With honed leadership skills, I am here to guide and inspire you on your academic journey, aiming to illuminate your path with insights, encouragement, and the knowledge needed for success. Beyond imparting information, I strive to ignite your curiosity, fuel your passion for learning, and empower you to overcome any academic challenge.'
     }
 ]
