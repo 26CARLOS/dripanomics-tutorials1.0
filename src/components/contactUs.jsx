@@ -5,7 +5,7 @@ import {FaWhatsapp} from 'react-icons/fa'
  
 const ContactUs = () => {
   return (
-    <div className='max-w-[800px] mt-[80px] w-full h-[50vh] mx-auto text-center flex flex-col items-center' >
+    <div className='max-w-[800px] w-full h-[50vh] mx-auto text-center flex flex-col items-center  mt-[95px]' >
         <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
             Contact Us:
         </h1>

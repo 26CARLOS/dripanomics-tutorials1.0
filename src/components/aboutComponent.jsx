@@ -5,9 +5,9 @@ import TutorCarousel from './tutorsCarousel'
 
 const AboutComponent = () => {
   return (
-    <div className='text-black'>
+    <div className='text-black  mt-[95px]'>
     <div className='max-w-[800px] mt-[20px] w-full h-[80vh] mx-auto text-center flex flex-col' >
-        <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
+        <h1 className='md:text-6xl sm:text-5xl text-2xl font-bold md:py-6 text-black'>
             Who Are We?
         </h1>
         <div className='flex justify-center items-center'>
@@ -15,7 +15,7 @@ const AboutComponent = () => {
             At Dripanomics, we're not just tutors – we're your dedicated learning allies. Passionate about education, we're a team committed to nurturing inquisitive minds. Our mission goes beyond grades; it's about fostering critical thinking, building confidence, and instilling a lasting love for learning. With expertise and enthusiasm, our tutors are here to illuminate your path to success. Join Dripanomics, where learning transcends the ordinary, and every student is empowered to thrive.
             </p>
         </div>
-        <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
+        <h1 className='md:text-6xl sm:text-4xl text-2xl font-bold md:py-6 text-black'>
             Modules We Cover:
         </h1>
         <div className='flex flex-col justify-center items-center'>
@@ -25,7 +25,7 @@ const AboutComponent = () => {
         </div>
     </div>
     <div className='max-w-[800px] w-full mx-auto mt-16 text-center flex flex-col' >
-        <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
+        <h1 className='md:text-6xl sm:text-5xl text-2xl font-bold md:py-6 text-black  mt-[95px] md:mt[10px]'>
             Meet The Team:
             <div className='flex flex-col justify-center items-center'>
             <p className='px-2 py-2 text-gray-500 text-justify text-xs'>Click on a tutor's name to read their bio below their card.</p>

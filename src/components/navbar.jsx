@@ -15,7 +15,8 @@ const closeMobileNav =() =>{
     setNav(true);
 }
   return (
-    <div className='flex flex-wrap justify-between items-center h-24 max-w-[1480px] mx-auto px-4 text-black'>
+    <div className='w-full fixed top-0 bg-white'>
+        <div className='flex flex-wrap justify-between items-center h-24 max-w-[1480px] mx-auto px-4 text-black'>
         <Link to="/">
             <div className='flex flex-row items-center justify-center'>
                 <img src={logo} alt="Dripanomics Tutorials logo." className='hidden md:block'/><h1 className=' font-bold md:text-3xl text-black'>Dripanomics Tutorials.</h1>
@@ -25,6 +26,7 @@ const closeMobileNav =() =>{
         <ul className='hidden md:flex'>
             <NavLink to="/" ><li className='p-4'>Home</li></NavLink> 
             <NavLink to="/tutors" ><li className='p-4'>Tutors</li></NavLink>
+            <NavLink to="/gettutor" ><li className='p-4 flex flex-wrap'>Get A Tutor</li></NavLink>
             <NavLink to="/modules" ><li className='p-4'>Modules</li></NavLink>
             <NavLink to="/about" ><li className='p-4'>About</li></NavLink>
             <NavLink to="/contact" ><li className='p-4'>Contact</li></NavLink>
@@ -40,10 +42,12 @@ const closeMobileNav =() =>{
                 <li className='p-4 border-b border-gray-600 'onClick={closeMobileNav}><NavLink to="/modules">Modules</NavLink></li>
                 <li className='p-4 border-b border-gray-600 'onClick={closeMobileNav}><NavLink to="/about">About</NavLink> </li>
                 <li className='p-4 border-b border-gray-600'onClick={closeMobileNav}><NavLink to="/contact">Contact</NavLink></li>
-                <li className='p-4 border-b border-gray-600'onClick={closeMobileNav}><NavLink to="/faqs">FAQs</NavLink></li>
+                <li className='p-4 border-b border-gray-600'onClick={closeMobileNav}><NavLink to="/gettutor">Get A Tutor</NavLink></li>
             </ul>
         </div>
     </div>
+    </div>
+    
   )
 }
 

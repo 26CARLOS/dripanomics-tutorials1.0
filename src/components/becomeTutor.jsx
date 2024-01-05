@@ -51,7 +51,7 @@ const BecomeTutor = () => {
   };
 
   return (
-<div className='max-w-[800px] w-full h-[110vh] mx-auto text-center flex flex-col' >
+<div className='max-w-[800px] w-full h-[110vh] mx-auto text-center flex flex-col mt-[95px]' >
         <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
             Join The Team:
             <div className='flex flex-col justify-center items-center'>

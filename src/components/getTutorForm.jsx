@@ -42,7 +42,7 @@ const GetTutorForm = () => {
     };
 
   return (
-    <div>
+    <div className='mt-[95px] mb-[85px]'>
         <div className='text-black text-center py-2'>
             <h1 className='text-4xl font-medium py-6'>Get an expericed tutor today!</h1>
         </div>
