@@ -5,7 +5,7 @@ import girls from '../assets/girls-tutoring.jpg'
 
 const One = () => {
   return (
-    <div className='w-full bg-white py-16 px-4 '>
+    <div className='w-full bg-white py-16 px-4 mt-8 '>
         <div className='max-w[1024px] mx-auto grid md:grid-cols-2'>
             <img className='w-[500px] mx-auto my-4  rounded-lg shadow-md ' src={girls} alt="One on one Tutorial"/>
             <div className='flex flex-col justify-center pl-4'>
