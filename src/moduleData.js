@@ -16,6 +16,7 @@ import Economics2D from './assets/economics2D.jpg'
 import tax200 from './assets/tax200.jpg';
 import AccStudies from './assets/AccountingStudies.jpg';
 import BasicMath from './assets/BasicMath.jpg';
+import MAA from './assets/MAA.jpg';
 
 const moduleData = [
 
@@ -41,7 +42,7 @@ const moduleData = [
     },
 
     {
-        name:'Computer Science 1A/1B<',
+        name:'Computer Science 1A/1B',
         picture:CompSci,
     },
 
@@ -108,6 +109,11 @@ const moduleData = [
     {
         name:'Basic Maths & Application in Economics & Business A/B',
         picture:BasicMath,
+    },
+
+    {
+        name:'Mathematical Analysis A',
+        picture:MAA,
     },
 
 ];
