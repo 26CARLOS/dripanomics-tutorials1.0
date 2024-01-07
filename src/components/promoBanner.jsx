@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom'
 
 const PromoBanner = () => {
   return (
-    <div className='flex flex-col justify-center w-full h-[55vh]  md:h-[80vh]  bg-black text-white text-center text-xs md:text-2xl'> 
+    <div className='flex flex-col justify-center w-full h-[65vh]  md:h-[95vh]  bg-black text-white text-center text-xs md:text-2xl'> 
         <h2 className='py-2 font-bold'>Unlock Sucess with Our Exclusive Semester Prep Combo!</h2>
         <h1 className='py-2 font-bold md:text-5xl'>Limited-Time Offer: Enroll Now and Save up to 35%</h1>
         <p className='py-4 font-thin'>Are you ready to ace your semester?</p>
