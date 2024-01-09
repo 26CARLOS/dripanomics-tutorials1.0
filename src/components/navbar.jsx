@@ -15,7 +15,7 @@ const closeMobileNav =() =>{
     setNav(true);
 }
   return (
-    <div className='w-full fixed top-0 bg-white'>
+    <div className='w-full fixed top-0 bg-white z-20'>
         <div className='flex flex-wrap justify-between items-center h-24 max-w-[1480px] mx-auto px-4 text-black'>
         <Link to="/">
             <div className='flex flex-row items-center justify-center'>

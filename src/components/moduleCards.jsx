@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import moduleData from '../moduleData'
 
+
 const ModuleCards = () => {
   return (
     <div className=' mt-[95px]'>
@@ -12,12 +13,13 @@ const ModuleCards = () => {
     <div className='w-full py-[5rem] px-4 bg-white'>
     <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
             {moduleData.map((module, id) => (
-            <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300' key={id} value={module}>
-                <div className='flex flex-col items-center text-6xl'>
-                    <img src={module.picture} alt={module.name} className='rounded-lg'/>
+                <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300' key={id} value={module}>
+                    <div className='flex flex-col items-center text-6xl'>
+                    <Link to="/gettutor"><img src={module.picture} alt={module.name} className='rounded-lg'/></Link>
+                    </div>
+                    <h2 className='text-2xl font-bold text-center py-8'>{module.name}</h2>
                 </div>
-                <h2 className='text-2xl font-bold text-center py-8'>{module.name}</h2>
-            </div>
+          
         ))}
         <div className='w-full shadow-xl flex flex-col justify-center p-4 my-4 rounded-lg hover:scale-105 duration-300'>
             <div className=''>
