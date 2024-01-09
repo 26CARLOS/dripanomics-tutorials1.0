@@ -29,17 +29,16 @@ const GetTutorForm = () => {
             setEmail('');
             setPhone('');
             setModule('');
-             alert("Sent Succesfuly!");
+            alert("Sent Succesfuly!");
         })
         .catch((error) =>
         console.error('Error sending email', error));
         
     }
 
-    const getSelectedValue = (e) => {
-        // Set the selected value to the state
-        setModule(e.target.value);
-    };
+    // const getSelectedValue = (e) => {
+    //     setModule(e.target.value);
+    // };
 
   return (
     <div className='mt-[95px] mb-[85px]'>
@@ -51,7 +50,8 @@ const GetTutorForm = () => {
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)} required/>
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder='Phone Number' value={phone} onChange={(e)=>setPhone(e.target.value)} required/>
             <p className='px-2 py-2 text-gray-500'> Please Select a Module below:</p>
-            <select  className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={module} onChange={(e) => getSelectedValue(e)} required>
+            <select  className=" w-[350px] shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-center" value={module} onChange={(e) => setModule(e.target.value)} defaultValue='Accounting A' required>
+                <option>--Select an Option--</option>
                 <option>Accounting A</option>
                 <option>Accounting B</option>
                 <option>Accounting 1A</option>
@@ -59,6 +59,8 @@ const GetTutorForm = () => {
                 <option>Accounting Studies 200</option>
                 <option>Analytical techniques 1A</option>
                 <option>Analytical techniques 1B</option>
+                <option>Basic Maths & Application in Economics & Business A</option>
+                <option>Basic Maths & Application in Economics & Business B</option>
                 <option>Business Management 1A</option>
                 <option>Business Management 1B</option>
                 <option>Computer Science 1A</option>

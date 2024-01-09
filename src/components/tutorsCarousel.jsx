@@ -10,6 +10,9 @@ import Zandile from '../assets/Zandile.jpg';
 import Lindokuhle from '../assets/Lindokuhle.jpg';
 import Miesie from '../assets/Miesie.jpg';
 import Sphesihle from '../assets/Spesihle.jpg';
+import Rorisang from '../assets/Rorisang.jpg';
+import Lungile from '../assets/Lungile.jpg';
+import Koketso from '../assets/Koketso.jpg';
 
 
 const Tutors =[
@@ -71,7 +74,25 @@ const Tutors =[
     name:'Sphesihle Nkosi',
     modules:'Economics 2C&2D',
     bio:'I am Sphesihle Nkosi, a dedicated member of the Golden Key International Honour Society since 2022, driven by a commitment to academic excellence and a passion for nurturing talent. My adaptable approach ensures personalized tutoring sessions tailored to your unique learning style. With honed leadership skills, I am here to guide and inspire you on your academic journey, aiming to illuminate your path with insights, encouragement, and the knowledge needed for success. Beyond imparting information, I strive to ignite your curiosity, fuel your passion for learning, and empower you to overcome any academic challenge.'
-    }
+    },
+
+    {profileImage:Rorisang,
+    name:'Rorisang Mbele',
+    modules:'Mathematical Analysis A',
+    bio:'Rorisang Biko Mbele, a dedicated advocate for academic excellence, maintains a 93% overall average and emphasizes the transformative power of patience in education. Passionate about collaborative learning, Rorisang thrives on working with people and has a high level of emotional intelligence to create a supportive learning environment. Viewing challenges as opportunities for growth, Rorisang is committed to leveraging their strengths and experiences to positively impact the academic community.'
+},
+
+    {profileImage:Lungile,
+    name:'Lungile Kubayi',
+    modules:'Basic Maths & Application in Economics & Business',
+    bio:'Hello! I am Lungile Kubayi, a passionate advocate for academic excellence and proven leader in education. Achieving Gauteng Top Honors in Accounting and Mathematics, I also excel in MAEB (Mathematics, Accounting, Economics, and Business Studies) disciplines and received the Tshwane North 2022 Accounting Top Achiever award. As a Ujenius and Golden Key member, I am dedicated to continuous learning and community service. With a vision to inspire and contribute positively to academia, I am committed to empowering others to reach their full potential.',
+    },
+
+    {profileImage:Koketso,
+    name:'Koketso Mathole',
+    modules:'Computer Science 1A & Applied Mathematics',
+    bio:'Koketso B. Mathole, a fourth-year student at the University of Johannesburg pursuing a BSc in Mathematics in Applied Mathematics and Computer Science, is deeply passionate about problem-solving. With a unique fusion of mathematics and programming, particularly in Java and C++, Koketso turns these subjects into engaging hobbies, unlocking a realm of creativity and exhilarating problem-solving. As a dedicated tutor, Koketso aims to nurture minds, foster a love for learning, and instill confidence in tackling academic challenges, offering an educational journey where each session becomes an opportunity for growth and discovery.'
+    },
 ]
 
 
