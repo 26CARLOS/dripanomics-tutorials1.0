@@ -12,6 +12,7 @@ import Miesie from '../assets/Miesie.jpg';
 import Sphesihle from '../assets/Spesihle.jpg';
 import Rorisang from '../assets/Rorisang.jpg';
 import Lungile from '../assets/Lungile.jpg';
+import Koketso from '../assets/Koketso.jpg';
 
 
 const Tutors =[
@@ -85,7 +86,13 @@ const Tutors =[
     name:'Lungile Kubayi',
     modules:'Basic Maths & Application in Economics & Business',
     bio:'Hello! I am Lungile Kubayi, a passionate advocate for academic excellence and proven leader in education. Achieving Gauteng Top Honors in Accounting and Mathematics, I also excel in MAEB (Mathematics, Accounting, Economics, and Business Studies) disciplines and received the Tshwane North 2022 Accounting Top Achiever award. As a Ujenius and Golden Key member, I am dedicated to continuous learning and community service. With a vision to inspire and contribute positively to academia, I am committed to empowering others to reach their full potential.',
-    }
+    },
+
+    {profileImage:Koketso,
+    name:'Koketso Mathole',
+    modules:'Computer Science 1A & Applied Mathematics',
+    bio:'Koketso B. Mathole, a fourth-year student at the University of Johannesburg pursuing a BSc in Mathematics in Applied Mathematics and Computer Science, is deeply passionate about problem-solving. With a unique fusion of mathematics and programming, particularly in Java and C++, Koketso turns these subjects into engaging hobbies, unlocking a realm of creativity and exhilarating problem-solving. As a dedicated tutor, Koketso aims to nurture minds, foster a love for learning, and instill confidence in tackling academic challenges, offering an educational journey where each session becomes an opportunity for growth and discovery.'
+    },
 ]
 
 

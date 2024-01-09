@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import TutorCarousel from './tutorsCarousel'
+import Testimonials from './testimonials'
   
 
 const AboutComponent = () => {
   return (
-    <div className='text-black  mt-[95px]'>
+    <div className='flex flex-col  items-center text-black  mt-[95px] mb-[700px]'>
     <div className='max-w-[800px] mt-[20px] w-full h-[80vh] mx-auto text-center flex flex-col' >
         <h1 className='md:text-6xl sm:text-5xl text-2xl font-bold md:py-6 text-black'>
             Who Are We?
@@ -23,8 +23,11 @@ const AboutComponent = () => {
             At Dripanomics Tutorials, we offer tutoring services across a diverse array of subjects. Whether it's Pyschology, Statistics, Accounting, or any other discipline, our tutors are well-versed and equipped to provide guidance. Explore our comprehensive list of subjects and embark on a journey of academic excellence with us.            </p>
             <Link to='/modules'><button className='hidden md:block bg-gray-400 w-[200px] rounded-md font-medium mx-auto my-auto py-3 text-black hover:scale-105 duration-300'>View Our Catalouge</button></Link>
         </div>
+        <div className='mb-[200px]'>
+       <Testimonials/>
+        </div>
     </div>
-    <div className='max-w-[800px] w-full mx-auto mt-16 text-center flex flex-col' >
+    {/* <div className='max-w-[800px] w-full mx-auto mt-16 text-center flex flex-col' >
         <h1 className='md:text-6xl sm:text-5xl text-2xl font-bold md:py-6 text-black  mt-[95px] md:mt[10px]'>
             Meet The Team:
             <div className='flex flex-col justify-center items-center'>
@@ -35,7 +38,7 @@ const AboutComponent = () => {
             </div>
         </h1>
     </div>
-    
+     */}
 </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const NewsLetter = () => {
   return (
@@ -18,7 +18,7 @@ const NewsLetter = () => {
 				
 				<div class="formkit-field">
 				<input name="email_address" aria-label="Email Address" 
-				placeholder="Email Address" required="" type="email" className='p-3 w-[400px] rounded-md text-black' />
+				placeholder="Email Address" required="" type="email" className='p-3 w-[300px] md:w-[400px] rounded-md text-black' />
 				</div>
 				<div className='mt-4'>
 					<button data-element="submit" class="formkit-submit formkit-submit" className='bg-black text-gray-400 rounded-md font-medium w-[200px] ml-4 mx-6 py-3' ><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Subscribe</span></button>
