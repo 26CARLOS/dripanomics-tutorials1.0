@@ -16,7 +16,7 @@ const Footer = () => {
             <div className='flex flex-row justify-center'>
             <FaCopyright className='mt-1'/><p>2024 Dripanomics Tutorials</p>
             </div>
-             <a href='https://instagram.com/carlosjxma'><p className='text-black font-semibold'>Designed & Built by Carlos</p></a>
+             {/* <a href='https://instagram.com/carlosjxma'><p className='text-black font-semibold'>Designed & Built by Carlos</p></a> */}
         </div>
     </div>
     
