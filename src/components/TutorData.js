@@ -24,7 +24,7 @@ const Tutors =[
     {profileImage:Asonele,
     name: 'Asonele Mkatshane',
     modules:'Economics 1A/1B',
-    bio:'I am a second-year University of Johannesburg Bachelor of Commerce student majoring in economics and econometrics. I have successfully completed my first year with 10 distinctions and an average percentage of 80%. I have also completed my training under the personal development program, and through it, I was able to put my abilities to use by leading a group on a research project for the Mastering of Academic and Professional Skills (MAPS). In addition, the MAPS curriculum taught me the fundamentals of Microsoft Word, Excel, and PowerPoint. In high school, I received leadership training through the Columba Leadership Programme (2021), and I was among the top three performing students in the commerce stream.'
+    bio:'I am a second-year University of Johannesburg Bachelor of Commerce student studying in economics and econometrics. I successfully finished my first year with an average percentage of 80% and 10 distinctions. My continuous desire to achieve the best I can gives me the power to inspire and motivate others to pursue similar and even greater goals. After finishing the Personal Development program training, I have the responsibility of molding learners` attitudes and actions toward learning and developing their personalities so they can achieve greater things. Using the leadership abilities I acquired from the Columba Leadership Programme, I can help students reach their objectives and make a significant difference in their studies.'
     },
 
     {profileImage:Pierrette,
