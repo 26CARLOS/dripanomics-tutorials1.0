@@ -93,11 +93,6 @@ const Tutors =[
     bio:'Koketso B. Mathole, a fourth-year student at the University of Johannesburg pursuing a BSc in Mathematics in Applied Mathematics and Computer Science, is deeply passionate about problem-solving. With a unique fusion of mathematics and programming, particularly in Java and C++, Koketso turns these subjects into engaging hobbies, unlocking a realm of creativity and exhilarating problem-solving. As a dedicated tutor, Koketso aims to nurture minds, foster a love for learning, and instill confidence in tackling academic challenges, offering an educational journey where each session becomes an opportunity for growth and discovery.'
     },
 
-    {profileImage:Nghwazi,
-    name: 'Nghwazi Makhubele',
-    modules: 'Taxation 2A/B & Financial-Mnagement 2A',
-    bio: 'Nghwazi Makhubele, a dedicated third-year BCom Accounting student at UJ, is deeply passionate about finance and accounting, demonstrating a commitment to academic excellence and maintaining outstanding results. A member of Golden Key South Africa, Nghwazi excels in communication, values collaboration, and embraces a lifelong learning mindset. Fueled by a goal-driven spirit, Nghwazi aims to exceed expectations and inspire others in their academic journey, particularly in tutoring, where the mission is to empower minds and cultivate a love for learning beyond the classroom.'
-    }
 ]
 
 export default Tutors;
