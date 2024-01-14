@@ -19,7 +19,7 @@ const Hero = () => {
                 </p>
                 <div  className='font-bold pl-2 md:pl-2 text-black'>
                     <Typewriter 
-                    words={['Accounting', 'HRM', 'ATE', 'Economics', 'Fin-Man', 'Marketing', 'Psychology','Math','Business','Comp-Sci','Taxation','MAEB' ]} 
+                    words={['ACC', 'HRM', 'ATE', 'Econ', 'Fin-Man', 'Psych','Math','BMA','Comp-Sci','Tax','MAEB' ]} 
                     cursor
                     cursorBlinking
                     typeSpeed={100} 
