@@ -16,7 +16,7 @@ const faqs =[
     answer:'Scheduling a tutoring session is easy! Simply provide your details and one of consultants will contact you to schedule a session. You can also contact our support team for assistance in scheduling sessions.'},
 
     {question:'What is the duration of each tutoring session?',
-    answer:'Our standard tutoring sessions are 60 minutes or more long, but we also offer the flexibility to extend sessions if needed. Discuss your preferences with your tutor to ensure the best learning experience.'},
+    answer:'Our standard tutoring sessions are 60-120 minutes long, but we also offer the flexibility to extend sessions if needed. Discuss your preferences with your tutor to ensure the best learning experience.'},
 
     {question:'Do you offer group tutoring sessions?',
     answer:'Yes, we do offer group tutoring sessions. Group sessions are a great option for students who prefer collaborative learning or want to study with classmates. The group size can vary, and rates are adjusted accordingly.'},
@@ -28,7 +28,7 @@ const faqs =[
     answer:'Absolutely! If you find a tutor who fits your needs and teaching style preferences, you can request them for ongoing sessions. We strive to provide consistency and ensure a productive learning experience.'},
 
     {question:'How do I provide feedback on my tutoring sessions?',
-    answer:'We value your feedback! After each session, you will have the opportunity to provide feedback through your tutor We use this feedback to continually improve our services.'},
+    answer:'We value your feedback! After each session, you will have the opportunity to provide feedback after each session, you have the opportunity to provide feedback by contacting our contact team via our official email. We use this feedback to continually improve our services.'},
 ];
 
 function Accordion() {
