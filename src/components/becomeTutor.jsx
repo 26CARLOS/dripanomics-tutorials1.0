@@ -72,6 +72,7 @@ const BecomeTutor = () => {
                 <option>Accounting B</option>
                 <option>Accounting 1A</option>
                 <option>Accounting 1B</option>
+                <option>Accounting 2A</option>
                 <option>Accounting Studies 200</option>
                 <option>Analytical techniques 1A</option>
                 <option>Analytical techniques 1B</option>
@@ -86,6 +87,7 @@ const BecomeTutor = () => {
                 <option>Economics 2D</option>
                 <option>Financial-Management 1A</option>
                 <option>Financial-Management 1B</option>
+                <option>Financial-Management 2A</option>
                 <option>Human Resource Management 1A</option>
                 <option>Human Resource Management 1B</option>
                 <option>Industrial Psychlogy 1A</option>
