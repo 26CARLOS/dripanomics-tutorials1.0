@@ -17,6 +17,10 @@ import tax200 from '../assets/tax200.jpg';
 import AccStudies from '../assets/AccountingStudies.jpg';
 import BasicMath from '../assets/BasicMath.jpg';
 import MAA from '../assets/MAA.jpg';
+import FRAMA from '../assets/FRAMA.jpg';
+import FRAMB from '../assets/FRAMB.jpg';
+
+
 
 const moduleData = [
 
@@ -37,6 +41,17 @@ const moduleData = [
     },
 
     {
+        name:'Accounting Studies 200',
+        picture:AccStudies,
+    },
+
+    {
+        name:'Basic Maths & Application in Economics & Business A/B',
+        picture:BasicMath,
+    },
+
+
+    {
         name:'Business Management 1A/1B',
         picture:Business,
     },
@@ -52,8 +67,29 @@ const moduleData = [
     },
 
     {
+        name:'Economics 2C',
+        picture:Economics2C,
+    },
+
+    {
+        name:'Economics 2D',
+        picture:Economics2D,
+    },
+
+
+    {
         name:'Financial-Management 1A/1B',
         picture:FinMan,
+    },
+
+    {
+        name:'Financial Reporting Analysis & Management A',
+        picture:FRAMA,
+    },
+
+    {
+        name:'Financial Reporting Analysis & Management B',
+        picture:FRAMB,
     },
 
     {
@@ -69,6 +105,11 @@ const moduleData = [
     {
         name:'Marketing 1A/1B',
         picture:Marketing,
+    },
+
+    {
+        name:'Mathematical Analysis A',
+        picture:MAA,
     },
 
     {
@@ -91,30 +132,7 @@ const moduleData = [
         picture:tax200,
     },
 
-    {
-        name:'Economics 2C',
-        picture:Economics2C,
-    },
 
-    {
-        name:'Economics 2D',
-        picture:Economics2D,
-    },
-
-    {
-        name:'Accounting Studies 200',
-        picture:AccStudies,
-    },
-
-    {
-        name:'Basic Maths & Application in Economics & Business A/B',
-        picture:BasicMath,
-    },
-
-    {
-        name:'Mathematical Analysis A',
-        picture:MAA,
-    },
 
 ];
 
