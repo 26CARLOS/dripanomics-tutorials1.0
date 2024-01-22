@@ -19,6 +19,7 @@ import BasicMath from '../assets/BasicMath.jpg';
 import MAA from '../assets/MAA.jpg';
 import FRAMA from '../assets/FRAMA.jpg';
 import FRAMB from '../assets/FRAMB.jpg';
+import CommLaw from '../assets/CommLaw.jpg';
 
 
 
@@ -54,6 +55,11 @@ const moduleData = [
     {
         name:'Business Management 1A/1B',
         picture:Business,
+    },
+
+    {
+        name:'Commercial Law 1A/B',
+        picture:CommLaw,
     },
 
     {

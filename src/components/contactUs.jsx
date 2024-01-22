@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsPhone,} from 'react-icons/bs'
 import { HiOutlineMail } from "react-icons/hi";
-import {FaWhatsapp} from 'react-icons/fa'
+import {FaWhatsapp,FaInstagram} from 'react-icons/fa'
  
 const ContactUs = () => {
   return (
@@ -30,6 +30,10 @@ const ContactUs = () => {
 
             <div className='flex flex-row justify-center mt-2'>
                 <HiOutlineMail className='' size={30}/><p>: <a href="mailto:sekgobelajr@gmail.com ">sekgobelajr@gmail.com</a></p>
+            </div>
+
+            <div className='flex flex-row justify-center mt-2'>
+                <FaInstagram className='' size={30}/><p>: <a href="https://www.instagram.com/dripanomics.tutorials?igsh=MWhnaDJvb3BkZ3R2MQ">@dripanomics.tutorials</a></p>
             </div>
             
         </div>
