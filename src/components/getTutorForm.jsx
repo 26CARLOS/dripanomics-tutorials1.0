@@ -64,6 +64,8 @@ const GetTutorForm = () => {
                 <option>Basic Maths & Application in Economics & Business B</option>
                 <option>Business Management 1A</option>
                 <option>Business Management 1B</option>
+                <option>Commercial Law 1A</option>
+                <option>Commercial Law 1B</option>
                 <option>Computer Science 1A</option>
                 <option>Computer Science 1B</option>
                 <option>Economics 1A</option>
