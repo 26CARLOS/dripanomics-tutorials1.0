@@ -43,7 +43,7 @@ const GetTutorForm = () => {
   return (
     <div className='mt-[95px] mb-[85px]'>
         <div className='text-black text-center py-2'>
-            <h1 className='text-4xl font-medium py-6'>Get an expericed tutor today!</h1>
+            <h1 className='text-4xl font-medium py-6'>Get an experienced tutor today!</h1>
         </div>
         <form className='flex flex-col justify-center items-center gap-6' onSubmit={handleSubmit}>
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder='Full Name' value={name} onChange={(e)=>setName(e.target.value)} required/>
