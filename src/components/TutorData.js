@@ -123,7 +123,7 @@ const Tutors =[
     {profileImage:Thuli,
     name:Thuli,
     modules:"Management Accounting & Governance and Control",
-    bio:""
+    bio:"Thuli Marriam Moopong is a dynamic professional currently pursuing a BCom Honours in Internal Auditing at the University of Johannesburg, having already excelled in her BCom Accounting degree in 2023. Recognized as an Academic Top Achiever, Thuli demonstrates unwavering dedication and excellence in her studies, continuously pursuing learning opportunities. Beyond her strong academic background, Thuli possesses a diverse skill set, including proficiency in Microsoft Office tools and exceptional communication and people management skills. Positioned for success, Thuli Moopong is a well-rounded professional with a proven track record and promising future in both academic and professional spheres, as evidenced on her LinkedIn profile."
     }
     
 ]

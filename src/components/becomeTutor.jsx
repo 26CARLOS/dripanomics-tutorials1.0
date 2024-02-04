@@ -92,10 +92,12 @@ const BecomeTutor = () => {
                 <option>Financial-Management 2A</option>
                 <option>Financial Reporting Analysis & Management A</option>
                 <option>Financial Reporting Analysis & Management B</option>
+                <option>Governance and Control</option>
                 <option>Human Resource Management 1A</option>
                 <option>Human Resource Management 1B</option>
                 <option>Industrial Psychlogy 1A</option>
                 <option>Industrial Psychlogy 1B</option>
+                <option>Management Accounting</option>
                 <option>Marketing 1A</option>
                 <option>Marketing 1B</option>
                 <option>Psychology 1A</option>
