@@ -15,7 +15,7 @@ import Nghwazi from "../assets/Nghwazi.jpg";
 import Zuko from "../assets/Zuko.jpg";
 import Lecy from "../assets/Lecy.jpg";
 import Amogelang from "../assets/Amogelang.jpg";
-
+import Thuli from '../assets/Thuli.jpg';
 
 const Tutors =[
     {profileImage:Remofilwe,
@@ -118,6 +118,12 @@ const Tutors =[
     name:"Zuko Bidie",
     modules:'Accounting 100',
     bio:"Meet Zuko Bidie, a dedicated professional contributing to the success of our tutoring company. Zuko's academic journey commenced with an impressive admission to UJ on the esteemed Orange Carpet. Demonstrating a commitment to excellence, Zuko achieved a remarkable feat by securing four distinctions out of six modules completed last year, including a notable distinction in Accounting. Zuko Bidie's passion for education, coupled with a track record of academic achievement, makes them an invaluable asset to our team, ensuring students receive top-notch guidance and support in their academic pursuits."
+    },
+
+    {profileImage:Thuli,
+    name:Thuli,
+    modules:"Management Accounting & Governance and Control",
+    bio:"Thuli Marriam Moopong is a dynamic professional currently pursuing a BCom Honours in Internal Auditing at the University of Johannesburg, having already excelled in her BCom Accounting degree in 2023. Recognized as an Academic Top Achiever, Thuli demonstrates unwavering dedication and excellence in her studies, continuously pursuing learning opportunities. Beyond her strong academic background, Thuli possesses a diverse skill set, including proficiency in Microsoft Office tools and exceptional communication and people management skills. Positioned for success, Thuli Moopong is a well-rounded professional with a proven track record and promising future in both academic and professional spheres, as evidenced on her LinkedIn profile."
     }
     
 ]

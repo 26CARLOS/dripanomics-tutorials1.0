@@ -20,6 +20,8 @@ import MAA from '../assets/MAA.jpg';
 import FRAMA from '../assets/FRAMA.jpg';
 import FRAMB from '../assets/FRAMB.jpg';
 import CommLaw from '../assets/CommLaw.jpg';
+import ManAcc from '../assets/ManAcc.jpg';
+import GovControl from '../assets/GovControl.jpg';
 
 
 
@@ -99,6 +101,11 @@ const moduleData = [
     },
 
     {
+        name:'Governance and Control',
+        picture:GovControl
+    },
+
+    {
         name:'Human Resource Management 1A/1B',
         picture:HR,
     },
@@ -106,6 +113,11 @@ const moduleData = [
     {
         name:'Industrial Psychlogy 1A/1B',
         picture:Industrial,
+    },
+
+    {
+        name:"Management Accounting",
+        picture:ManAcc
     },
 
     {
@@ -117,6 +129,7 @@ const moduleData = [
         name:'Mathematical Analysis A',
         picture:MAA,
     },
+
 
     {
         name:'Psychology 1A/1B',
