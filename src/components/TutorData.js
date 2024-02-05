@@ -110,7 +110,7 @@ const Tutors =[
 
     {profileImage:Amogelang,
     name:"Amogelang Modiba",
-    modules:"Accounting stuies & Auditing 200",
+    modules:"Accounting studies & Auditing 200",
     bio:""
     },
 
