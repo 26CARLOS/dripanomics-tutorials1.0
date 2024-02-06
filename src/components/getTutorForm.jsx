@@ -90,7 +90,7 @@ const GetTutorForm = () => {
                 <option>Research Modules 2nd year</option>
                 <option>Taxation 200</option>
                 <option>Taxation 2A</option>
-                <option>Taxation 2B</option>\
+                <option>Taxation 2B</option>
             </select>
             <button type="submit" className='bg-gray-400 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300'>Submit</button>
         </form>
