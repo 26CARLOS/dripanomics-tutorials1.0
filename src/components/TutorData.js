@@ -111,7 +111,7 @@ const Tutors =[
     {profileImage:Amogelang,
     name:"Amogelang Modiba",
     modules:"Accounting studies & Auditing 200",
-    bio:""
+    bio:"Amogelang Modiba is a highly motivated and result-oriented professional with exceptional management skills. As a dedicated member of the tutoring community, Amogelang brings a wealth of knowledge and expertise to the table. Academic excellence is at the core of Amogelang's achievements, as evidenced by prestigious affiliations such as being a Golden Key and UJenius Member. Notably, Amogelang has been recognized for outstanding performance in Accounting Studies, securing a coveted spot in the CA Destination Top 25. The Academic Colours of Honour further attest to Amogelang's commitment to excellence in education. With a passion for guiding others toward academic success, Amogelang Modiba is a valuable asset to any tutoring company."
     },
 
     {profileImage:Zuko,
