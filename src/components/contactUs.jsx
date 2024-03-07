@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsPhone,} from 'react-icons/bs'
 import { HiOutlineMail } from "react-icons/hi";
-import {FaWhatsapp,FaInstagram} from 'react-icons/fa'
+import {FaWhatsapp,FaInstagram, FaTelegram} from 'react-icons/fa'
  
 const ContactUs = () => {
   return (
@@ -17,11 +17,11 @@ const ContactUs = () => {
         <div className='text-normal md:text-2xl'>
             <h2>Contact Info:</h2>
             <div className='flex flex-row justify-center mt-2'>
-                <BsPhone className='' size={30}/><p>: <a href='tel:+27793388864'>079 338 8864</a></p>
+                <BsPhone className='' size={30}/><p>: <a href='tel:+27662179993'>066 217 9993</a></p>
             </div>
 
             <div className='flex flex-row justify-center mt-2'>
-                <FaWhatsapp className='' size={30}/><p>: <a href="https://wa.me/27793388864"> 079 338 8864</a></p>
+                <FaTelegram className='' size={30}/><p>: <a href="https://wa.me/277769541002"> 0776 954 1002</a></p>
             </div>
 
             <div className='flex flex-row justify-center mt-2'>
