@@ -22,10 +22,37 @@ import test19 from '../assets/testimonials/test19.jpg'
 import test20 from '../assets/testimonials/test20.jpg'
 import test21 from '../assets/testimonials/test21.jpg'
 import test22 from '../assets/testimonials/test22.jpg'
+import test23 from '../assets/testimonials/test23.jpg'
+import test24 from '../assets/testimonials/test24.jpg'
+import test25 from '../assets/testimonials/test25.jpg'
+import test26 from '../assets/testimonials/test26.jpg'
+import test27 from '../assets/testimonials/test27.jpg'
+import test28 from '../assets/testimonials/test28.jpg'
+import test29 from '../assets/testimonials/test29.jpg'
+import test30 from '../assets/testimonials/test30.jpg'
+import test31 from '../assets/testimonials/test31.jpg'
+import test32 from '../assets/testimonials/test32.jpg'
+import test33 from '../assets/testimonials/test33.jpg'
+import test34 from '../assets/testimonials/test34.jpg'
+import test35 from '../assets/testimonials/test35.jpg'
 
 
 
-const testimonialImages = [test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11,test12,test13,test14,test15,test16,test17,test18,test19,test20,test21,test22];
+const testimonialImages = [test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11,test12,test13,test14,test15,test16,test17,test18,test19,test20,test21,test22,
+test23,
+test24,
+test25,
+test26,
+test27,
+test28,
+test29,
+test30,
+test31,
+test32,
+test33,
+test34,
+test35,
+];
 
 const Testimonials = () => {
     const [currentIndex,setCurrentIndex] = useState(0);
