@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Primary - Warm Yellow/Gold accent */
-  --primary: 48 96% 53%;
-  --primary-foreground: 0 0% 0%;
-  
+  /* Primary - strict black/white */
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
+
   /* Background colors */
   --background: 100 100% 100%;
   --foreground: 0 0% 9%;
@@ -33,7 +33,7 @@
   --accent-foreground: 0 0% 8%;
   
   /* Destructive */
-  --destructive: 0 84% 60%;
+  --destructive: 0 0% 0%;
   --destructive-foreground: 0 0% 100%;
   
   /* Radius */
