@@ -32,9 +32,11 @@ const Navbar = () => {
 
   return (
     <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-card/95 backdrop-blur-md shadow-soft border-b border-border' 
-        : 'bg-transparent'
+      !nav
+        ? 'bg-card shadow-soft border-b border-border'
+        : scrolled 
+          ? 'bg-card/95 backdrop-blur-md shadow-soft border-b border-border' 
+          : 'bg-card/95 md:bg-transparent'
     }`}>
       <div className='flex items-center justify-between h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Logo */}

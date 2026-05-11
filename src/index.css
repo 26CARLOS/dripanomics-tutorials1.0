@@ -5,31 +5,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Primary - Warm Yellow/Gold accent */
-  --primary: 48 96% 53%;
-  --primary-foreground: 0 0% 0%;
-  
+  /* Primary - strict black/white */
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
+
   /* Background colors */
-  --background: 45 33% 97%;
-  --foreground: 0 0% 9%;
-  
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+
   /* Card/Surface */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
-  
+  --card-foreground: 0 0% 0%;
+
   /* Muted */
-  --muted: 45 20% 93%;
-  --muted-foreground: 0 0% 45%;
-  
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 35%;
+
   /* Border */
-  --border: 45 15% 88%;
-  
+  --border: 0 0% 85%;
+
   /* Accent */
-  --accent: 45 20% 93%;
-  --accent-foreground: 0 0% 9%;
-  
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 0%;
+
   /* Destructive */
-  --destructive: 0 84% 60%;
+  --destructive: 0 0% 0%;
   --destructive-foreground: 0 0% 100%;
   
   /* Radius */
