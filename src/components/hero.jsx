@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-router-dom';
-import { BsArrowRight, BsPlayCircle, BsStarFill } from 'react-icons/bs';
+import { BsArrowRight, BsPlayCircle } from 'react-icons/bs';
 
 const Hero = () => {
   return (
@@ -18,20 +18,6 @@ const Hero = () => {
 
       <div className='relative z-10 max-w-6xl w-full mx-auto px-6 lg:px-8 py-32 lg:py-40'>
         <div className='flex flex-col items-center text-center'>
-          {/* Badge */}
-          <div className="animate-fade-up opacity-0 mb-8">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-card border border-border rounded-full shadow-soft">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <BsStarFill key={i} className="w-3 h-3 text-foreground" />
-                ))}
-              </div>
-              <span className="text-sm font-medium text-foreground">
-                Trusted by 500+ students
-              </span>
-            </div>
-          </div>
-
           {/* Main Headline */}
           <h1 className='animate-fade-up opacity-0 delay-100 text-display-xl text-foreground max-w-4xl'>
             Expert Tutoring for
