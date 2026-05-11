@@ -21,7 +21,7 @@ const PromoBanner = () => {
         {/* Heading */}
         <h2 className='font-display font-bold text-4xl md:text-5xl lg:text-6xl text-background leading-tight'>
           Introducing
-          <span className="block text-primary mt-2">Dripanomics Grail</span>
+          <span className="block text-white mt-2">Dripanomics Grail</span>
         </h2>
 
         {/* Description */}
