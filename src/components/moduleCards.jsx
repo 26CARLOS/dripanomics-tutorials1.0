@@ -1,38 +1,82 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import moduleData from './moduleData'
-
+import { BsArrowRight, BsPlus } from 'react-icons/bs'
 
 const ModuleCards = () => {
   return (
-    <div className='py-20 lg:py-32'>
-    <div className='text-black text-center py-6'>
-        <h1 className='text-4xl font-bold'>Modules We Offer:</h1>
-        <p className='px-2 py-2 text-gray-500'> The wide variety of modules we tutor.</p>
-    </div>
-    <div className='w-full py-[5rem] px-4 bg-white'>
-    <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
-            {moduleData.map((module, id) => (
-                <div className='w-full shadow-sm border border-gray-100 flex flex-col p-4 my-4 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300' key={id} value={module}>
-                    <div className='flex flex-col items-center text-6xl'>
-                    <Link to="/gettutor"><img src={module.picture} alt={module.name} className='rounded-lg'/></Link>
-                    </div>
-                    <h2 className='text-2xl font-bold text-center py-8'>{module.name}</h2>
-                </div>
-          
-        ))}
-        <div className='w-full shadow-sm border border-gray-100 flex flex-col justify-center p-4 my-4 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300'>
-            <div className=''>
-            <h2 className='text-2xl font-bold text-center py-8 text-gray-500'>More on the way...</h2>
-            </div>               
+    <section className='py-16 lg:py-24 bg-background'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        {/* Header */}
+        <div className='text-center mb-12'>
+          <span className="text-sm font-semibold text-muted-foreground tracking-wide uppercase">
+            Academic Subjects
+          </span>
+          <h1 className='font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mt-3'>
+            Modules We Offer
+          </h1>
+          <p className='mt-4 text-muted-foreground max-w-xl mx-auto'>
+            Explore our comprehensive range of tutoring subjects
+          </p>
         </div>
 
-    </div>
-    <div className='flex justify-center'>
-        <Link to="/gettutor"> <button className='bg-black w-[200px] rounded-full shadow-lg font-medium my-6 mx-auto py-3 text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gray-800 transition-all duration-300'>Get a Tutor</button></Link>
-    </div>
-    </div>
-</div>
+        {/* Module Grid */}
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {moduleData.map((module, id) => (
+            <Link 
+              to="/gettutor" 
+              key={id}
+              className='group bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-medium transition-all duration-300'
+            >
+              {/* Image */}
+              <div className='relative aspect-[4/3] overflow-hidden'>
+                <img 
+                  src={module.picture} 
+                  alt={module.name}
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              
+              {/* Content */}
+              <div className='p-5'>
+                <h3 className='font-display font-semibold text-lg text-foreground group-hover:text-primary transition-colors'>
+                  {module.name}
+                </h3>
+                <div className='flex items-center gap-1 mt-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors'>
+                  <span>Get a tutor</span>
+                  <BsArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          ))}
+
+          {/* Coming Soon Card */}
+          <div className='bg-muted/50 rounded-2xl border border-dashed border-border flex flex-col items-center justify-center p-8 min-h-[280px]'>
+            <div className='w-12 h-12 flex items-center justify-center bg-muted rounded-xl text-muted-foreground mb-4'>
+              <BsPlus className="w-6 h-6" />
+            </div>
+            <h3 className='font-display font-semibold text-lg text-muted-foreground'>
+              More Coming Soon
+            </h3>
+            <p className='text-sm text-muted-foreground/70 mt-2 text-center'>
+              We are constantly expanding our offerings
+            </p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className='text-center mt-12'>
+          <Link 
+            to="/gettutor"
+            className='inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background font-semibold rounded-full hover:opacity-90 hover:gap-3 transition-all duration-200 group'
+          >
+            <span>Get Started Today</span>
+            <BsArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </div>
+    </section>
   )
 }
 
