@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { BsChevronLeft, BsChevronRight, BsBook, BsLinkedin, BsAward } from 'react-icons/bs';
+import { BsChevronLeft, BsChevronRight, BsBook, BsAward } from 'react-icons/bs';
 import Tutors from './TutorData.js'
 
 const TutorCarousel = () => {

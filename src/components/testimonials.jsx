@@ -46,17 +46,14 @@ const testimonialImages = [
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(1);
 
   const prevSlide = useCallback(() => {
-    setDirection(-1);
     const isFirst = currentIndex === 0;
     const newIndex = isFirst ? testimonialImages.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   }, [currentIndex]);
 
   const nextSlide = useCallback(() => {
-    setDirection(1);
     const isLast = currentIndex === testimonialImages.length - 1;
     const newIndex = isLast ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
