@@ -46,7 +46,7 @@ const Navbar = () => {
               className='h-10 w-10 lg:h-12 lg:w-12 group-hover:scale-105 transition-transform duration-300'
             />
           </div>
-          <span className='font-display font-bold text-xl lg:text-2xl text-foreground tracking-tight'>
+          <span className='font-bold text-xl lg:text-2xl text-foreground tracking-tight'>
             Dripanomics
           </span>
         </Link>

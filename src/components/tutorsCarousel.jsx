@@ -88,7 +88,7 @@ const TutorCarousel = () => {
 
               {/* Bio (expandable) */}
               <div className={`overflow-hidden transition-all duration-300 ${showBio ? 'max-h-48 mt-6' : 'max-h-0'}`}>
-                <p className='text-muted-foreground text-center leading-relaxed max-w-lg'>
+                <p className='text-xs text-muted-foreground text-center leading-relaxed max-w-lg'>
                   {currentTutor.bio}
                 </p>
               </div>
