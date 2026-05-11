@@ -3,30 +3,19 @@ import { Link} from 'react-router-dom'
 
 const PromoBanner = () => {
   return (
-    <div className='flex flex-col justify-center w-full h-[65vh]  md:h-[95vh]  bg-black text-white text-center text-xs md:text-2xl'> 
-        <h2 className='py-2 font-bold'>Introducing the future of learning</h2>
-        <h1 className='py-2 font-bold md:text-5xl'>Dripanomics Grail</h1>
-        <p className='py-2 font-thin'>We are happy to announce our brand new innovation.</p>
-        <p className='py-2 font-thin'> Our new online learning system better known as the <span className='font-bold'>Dripanomics Grail</span> </p>
-        <div className='flex flex-col lg:flex-row justify-between'>
-            <div className=''>
-                <h3 className='py-6'>What this means</h3>
-                <ul className=' text-center font-light'>
-                    <li>Unmatched Quality Education</li>
-                    <li>All your modules in one place</li>
-                    <li>Easier payment process</li>
-                    <li>Dedicated Assistance</li>
-                </ul>
+    <div className='flex flex-col justify-center items-center w-full min-h-[60vh] py-20 lg:py-32 bg-black text-white text-center px-4'> 
+        <div className='max-w-[800px] w-full flex flex-col gap-6'>
+            <h2 className='text-sm md:text-base font-bold tracking-widest uppercase text-gray-300'>Introducing the future of learning</h2>
+            <h1 className='font-bold text-4xl md:text-5xl lg:text-7xl'>Dripanomics Grail</h1>
+            <div className='flex flex-col gap-2 md:text-xl text-gray-300 font-light mt-4'>
+                <p>We are happy to announce our brand new innovation.</p>
+                <p>Our new online learning system better known as the <span className='font-bold text-white'>Dripanomics Grail</span>.</p>
             </div>
-            <div>
-                <h3 className='py-6'>Why join now?</h3>
-                <ul className=' text-center font-light '>
-                    <li>Make massive savings by taking advantage of our bundle offers</li>
-                    <li>Stay ahead of your peers, stay on top of your academic game. The Dripanomics way.</li>
-                </ul>
-            </div>
+
+            <Link to="https://app.dripanomicstutorials.com" className='mt-8'> 
+                <button className='bg-white w-[180px] rounded-full shadow-lg font-medium py-4 text-black hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100 transition-all duration-300'>Enroll Now!</button>
+            </Link>
         </div>
-        <Link to="https://app.dripanomicstutorials.com"> <button className='bg-gray-400 w-[150px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300'>Enroll Now!</button></Link>
     </div>
   )
 }

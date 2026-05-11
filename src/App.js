@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <main className="pt-24 min-h-screen flex flex-col">
         <Routes>
           <Route path="/" element = {<Home/>} />
           <Route path="/tutors" element={<Tutors/>} />
@@ -24,6 +25,7 @@ function App() {
           <Route path='/faqs' element={<Faqs/>} />
           <Route path='/gettutor' element={<GetTutor/>} />        
         </Routes>
+      </main>
       <Footer />
     </div>
   );

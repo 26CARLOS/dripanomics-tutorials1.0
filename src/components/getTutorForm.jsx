@@ -41,9 +41,9 @@ const GetTutorForm = () => {
     // };
 
   return (
-    <div className='mt-[95px] mb-[85px]'>
-        <div className='text-black text-center py-2'>
-            <h1 className='text-4xl font-medium py-6'>Get an experienced tutor today!</h1>
+    <div className='py-20 lg:py-32'>
+        <div className='text-black text-center mb-8'>
+            <h1 className='text-4xl font-bold'>Get an experienced tutor today!</h1>
         </div>
         <form className='flex flex-col justify-center items-center gap-6' onSubmit={handleSubmit}>
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder='Full Name' value={name} onChange={(e)=>setName(e.target.value)} required/>
@@ -92,7 +92,7 @@ const GetTutorForm = () => {
                 <option>Taxation 2A</option>
                 <option>Taxation 2B</option>
             </select>
-            <button type="submit" className='bg-gray-400 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300'>Submit</button>
+            <button type="submit" className='bg-black w-[200px] rounded-full shadow-lg font-medium my-6 mx-auto py-3 text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gray-800 transition-all duration-300'>Submit</button>
         </form>
     </div>
   )

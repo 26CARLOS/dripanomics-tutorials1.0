@@ -52,13 +52,13 @@ const BecomeTutor = () => {
 //   };
 
   return (
-<div className='max-w-[800px] w-full h-[110vh] mx-auto text-center flex flex-col mt-[65px] mb-[85px]' >
-        <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
-            Join The Team:
-            <div className='flex flex-col justify-center items-center'>
-            <p className='px-2 py-2 text-gray-500 text-justify text-xs'>Become a tutor with Dripanomics Tutorials, today!</p>
-            </div>
-        </h1>
+<div className='max-w-[800px] w-full mx-auto text-center flex flex-col py-20 lg:py-32' >
+        <div className='flex flex-col gap-4 items-center mb-8'>
+            <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold text-black'>
+                Join The Team
+            </h1>
+            <p className='px-2 text-gray-600 text-sm'>Become a tutor with Dripanomics Tutorials, today!</p>
+        </div>
         <form className='flex flex-col justify-center items-center gap-6' onSubmit={handleSubmit}>
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder='Full Name' value={name} onChange={(e)=>setName(e.target.value)} required/>
             <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)} required/>
@@ -109,7 +109,7 @@ const BecomeTutor = () => {
                 <option>Taxation 2B</option>
             </select>
             <textarea className="shadow appearance-none border w-[250px] h-[200px] rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder='Please specify any additional modules that you can tutor.' value={extraModule} onChange={(e)=>setExtraModule(e.target.value)} />
-            <button type="submit" className='bg-gray-400 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300'>Submit</button>
+            <button type="submit" className='bg-black w-[200px] rounded-full shadow-lg font-medium my-6 mx-auto py-3 text-white hover:-translate-y-1 hover:shadow-xl hover:bg-gray-800 transition-all duration-300'>Submit</button>
         </form>
     </div>
     

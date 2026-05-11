@@ -75,34 +75,34 @@ const Testimonials = () => {
     // }
     
     return(
-        < >
-        <div className='text-center mt-20'>       
-            <h1 className='md:text-6xl sm:text-5xl text-2xl font-bold md:py-6 text-black'>
-                Testimonials:
+        <div className='py-12 lg:py-20'>
+        <div className='text-center mb-8 px-4'>       
+            <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
+                Testimonials
             </h1>
-            <p className='text-gray-400'>Have a look at what our students have to say about Dripanomics Tutorials.</p>
+            <p className='text-gray-500 mt-4'>Have a look at what our students have to say about Dripanomics Tutorials.</p>
         </div>
-        <div className='max-w-[1400] w-full m-auto py-6 px-4 relative group'>
+        <div className='max-w-[1400px] w-full m-auto py-6 px-4 relative group'>
             
-            <div className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
+            <div className='w-full h-full rounded-3xl bg-center bg-cover duration-500'>
     
-                <div className='w-full flex flex-col items-center p-4 my-4 rounded-lg border'>
+                <div className='w-full flex flex-col items-center p-4 my-4 rounded-2xl border border-gray-100 shadow-sm bg-white'>
                     <div className='flex flex-row justify-center items-center w-[450px] h-[450px] transition ease-in-out duration-1000'>
-                        <img className='rounded-sm object-scale-down w-[450px] h-[450px]' src={testimonialImages[currentIndex]} alt=''/>
+                        <img className='rounded-xl object-scale-down w-[450px] h-[450px] shadow-sm' src={testimonialImages[currentIndex]} alt=''/>
                     </div>
                 </div>
     
             </div>
     
-            <div onClick={nextSlide} className='block md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+            <div onClick={prevSlide} className='block md:hidden md:group-hover:block absolute top-[50%] -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/10 hover:bg-black/30 transition-colors text-black cursor-pointer shadow-sm'>
                 <BsChevronCompactLeft size={30}/>
             </div>
     
-            <div onClick={prevSlide} className='bllock md:hidden md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+            <div onClick={nextSlide} className='block md:hidden md:group-hover:block absolute top-[50%] -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/10 hover:bg-black/30 transition-colors text-black cursor-pointer shadow-sm'>
                 <BsChevronCompactRight  size={30}/>
             </div>
         </div>
-        </>
+        </div>
         
       )
     }
