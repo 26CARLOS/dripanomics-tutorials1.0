@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from 'react'
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsQuestionCircle } from "react-icons/bs";
 
 const faqs = [
   {
@@ -51,51 +51,57 @@ function Accordion() {
   return (
     <div className='max-w-3xl mx-auto'>
       {/* Header */}
-      <div className='text-center mb-12'>
-        <span className="text-sm font-semibold text-muted-foreground tracking-wide uppercase">
-          Got Questions?
-        </span>
-        <h2 className="font-display font-bold text-3xl sm:text-4xl text-foreground mt-3">
-          Frequently Asked Questions
+      <div className='text-center mb-12 lg:mb-16'>
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-foreground text-background rounded-2xl mb-6">
+          <BsQuestionCircle className="w-8 h-8" />
+        </div>
+        <h2 className="text-display-sm text-foreground">
+          Frequently Asked
+          <span className="block text-muted-foreground">Questions</span>
         </h2>
-        <p className="mt-4 text-muted-foreground">
-          Find answers to common questions about our tutoring services
+        <p className="mt-4 text-muted-foreground max-w-lg mx-auto">
+          Everything you need to know about our tutoring services
         </p>
       </div>
 
       {/* FAQ Items */}
-      <div className='space-y-3'>
+      <div className='space-y-4'>
         {faqs.map((item, index) => (
           <div 
             key={index}
-            className={`bg-card rounded-xl border transition-all duration-200 ${
+            className={`bg-card rounded-2xl border overflow-hidden transition-all duration-300 ${
               openIndex === index 
-                ? 'border-primary/30 shadow-soft' 
+                ? 'border-foreground/20 shadow-medium' 
                 : 'border-border hover:border-border/80'
             }`}
           >
             <button
               onClick={() => toggleAccordion(index)}
-              className='w-full flex items-center justify-between p-5 text-left'
+              className='w-full flex items-center justify-between p-6 text-left'
             >
-              <span className={`font-medium pr-4 ${
+              <span className={`font-semibold text-lg pr-4 transition-colors ${
                 openIndex === index ? 'text-foreground' : 'text-foreground/80'
               }`}>
                 {item.question}
               </span>
-              <div className={`flex-shrink-0 p-1 rounded-full transition-all duration-200 ${
-                openIndex === index ? 'bg-primary text-primary-foreground rotate-180' : 'bg-muted text-muted-foreground'
+              <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                openIndex === index 
+                  ? 'bg-foreground text-background rotate-180' 
+                  : 'bg-muted text-muted-foreground'
               }`}>
-                <BsChevronDown className="w-4 h-4" />
+                <BsChevronDown className="w-5 h-5" />
               </div>
             </button>
             
-            <div className={`overflow-hidden transition-all duration-300 ${
+            <div className={`overflow-hidden transition-all duration-500 ease-smooth-out ${
               openIndex === index ? 'max-h-96' : 'max-h-0'
             }`}>
-              <p className='px-5 pb-5 text-muted-foreground leading-relaxed'>
-                {item.answer}
-              </p>
+              <div className='px-6 pb-6'>
+                <div className="h-px bg-border mb-4" />
+                <p className='text-muted-foreground leading-relaxed'>
+                  {item.answer}
+                </p>
+              </div>
             </div>
           </div>
         ))}

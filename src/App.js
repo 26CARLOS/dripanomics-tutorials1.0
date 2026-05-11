@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App bg-background min-h-screen flex flex-col">
       <Navbar />
-      <main className="pt-20 flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tutors" element={<Tutors />} />
