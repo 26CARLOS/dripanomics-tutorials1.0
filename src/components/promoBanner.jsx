@@ -1,22 +1,58 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { BsArrowRight } from 'react-icons/bs'
 
 const PromoBanner = () => {
   return (
-    <div className='flex flex-col justify-center items-center w-full min-h-[60vh] py-20 lg:py-32 bg-black text-white text-center px-4'> 
-        <div className='max-w-[800px] w-full flex flex-col gap-6'>
-            <h2 className='text-sm md:text-base font-bold tracking-widest uppercase text-gray-300'>Introducing the future of learning</h2>
-            <h1 className='font-bold text-4xl md:text-5xl lg:text-7xl'>Dripanomics Grail</h1>
-            <div className='flex flex-col gap-2 md:text-xl text-gray-300 font-light mt-4'>
-                <p>We are happy to announce our brand new innovation.</p>
-                <p>Our new online learning system better known as the <span className='font-bold text-white'>Dripanomics Grail</span>.</p>
-            </div>
+    <section className='relative py-24 lg:py-32 bg-foreground overflow-hidden'>
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+      </div>
 
-            <Link to="https://app.dripanomicstutorials.com" className='mt-8'> 
-                <button className='bg-white w-[180px] rounded-full shadow-lg font-medium py-4 text-black hover:-translate-y-1 hover:shadow-xl hover:bg-gray-100 transition-all duration-300'>Enroll Now!</button>
-            </Link>
+      <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full mb-8">
+          <span className="w-2 h-2 bg-primary rounded-full" />
+          <span className='text-primary text-sm font-semibold'>New Platform Launch</span>
         </div>
-    </div>
+
+        {/* Heading */}
+        <h2 className='font-display font-bold text-4xl md:text-5xl lg:text-6xl text-background leading-tight'>
+          Introducing
+          <span className="block text-primary mt-2">Dripanomics Grail</span>
+        </h2>
+
+        {/* Description */}
+        <p className='mt-6 text-lg text-background/70 max-w-2xl mx-auto leading-relaxed'>
+          Our revolutionary online learning platform. Access courses, track progress, and connect with tutors - all in one place.
+        </p>
+
+        {/* CTA */}
+        <div className="mt-10">
+          <Link 
+            to="https://app.dripanomicstutorials.com"
+            className='inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 hover:gap-4 transition-all duration-300 shadow-medium group'
+          >
+            <span>Enroll Now</span>
+            <BsArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+
+        {/* Features pills */}
+        <div className="flex flex-wrap justify-center gap-3 mt-12">
+          {['Interactive Lessons', 'Progress Tracking', 'Expert Support', '24/7 Access'].map((feature) => (
+            <span 
+              key={feature}
+              className="px-4 py-2 bg-background/10 text-background/80 text-sm font-medium rounded-full border border-background/20"
+            >
+              {feature}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

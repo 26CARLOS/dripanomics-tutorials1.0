@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { BsChevronCompactLeft,BsChevronCompactRight } from 'react-icons/bs';
+import React, { useState, useEffect, useCallback } from 'react'
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import test1 from '../assets/testimonials/test1.jpg'
 import test2 from '../assets/testimonials/test2.jpg'
 import test3 from '../assets/testimonials/test3.jpg'
@@ -36,75 +36,114 @@ import test33 from '../assets/testimonials/test33.jpg'
 import test34 from '../assets/testimonials/test34.jpg'
 import test35 from '../assets/testimonials/test35.jpg'
 
-
-
-const testimonialImages = [test1,test2,test3,test4,test5,test6,test7,test8,test9,test10,test11,test12,test13,test14,test15,test16,test17,test18,test19,test20,test21,test22,
-test23,
-test24,
-test25,
-test26,
-test27,
-test28,
-test29,
-test30,
-test31,
-test32,
-test33,
-test34,
-test35,
+const testimonialImages = [
+  test1, test2, test3, test4, test5, test6, test7, test8, test9, test10,
+  test11, test12, test13, test14, test15, test16, test17, test18, test19, test20,
+  test21, test22, test23, test24, test25, test26, test27, test28, test29, test30,
+  test31, test32, test33, test34, test35,
 ];
 
 const Testimonials = () => {
-    const [currentIndex,setCurrentIndex] = useState(0);
-    // const [showBio,setShowBio] = useState(false);
-    
-    const prevSlide =()=>{
-        const isFirst = currentIndex === 0;
-        const newIndex = isFirst ? testimonialImages.length-1:currentIndex-1;
-        setCurrentIndex(newIndex);
-    };
-    
-    const nextSlide =()=>{
-        const isLast =currentIndex===testimonialImages.length-1;
-        const newIndex = isLast?0:currentIndex+1;
-        setCurrentIndex(newIndex);
-    };
-    
-    // const toggleShowBio=()=>{
-    //     setShowBio(!showBio);
-    // }
-    
-    return(
-        <div className='py-12 lg:py-20'>
-        <div className='text-center mb-8 px-4'>       
-            <h1 className='md:text-6xl sm:text-5xl text-3xl font-bold md:py-6 text-black'>
-                Testimonials
-            </h1>
-            <p className='text-gray-500 mt-4'>Have a look at what our students have to say about Dripanomics Tutorials.</p>
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const prevSlide = useCallback(() => {
+    const isFirst = currentIndex === 0;
+    const newIndex = isFirst ? testimonialImages.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  }, [currentIndex]);
+
+  const nextSlide = useCallback(() => {
+    const isLast = currentIndex === testimonialImages.length - 1;
+    const newIndex = isLast ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  }, [currentIndex]);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(nextSlide, 4000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, nextSlide]);
+
+  return (
+    <section className='py-20 lg:py-28 bg-card'>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        {/* Section Header */}
+        <div className='text-center mb-12'>
+          <span className="text-sm font-semibold text-muted-foreground tracking-wide uppercase">
+            Student Success
+          </span>
+          <h2 className='font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mt-3'>
+            What Our Students Say
+          </h2>
+          <p className='text-muted-foreground mt-4 max-w-xl mx-auto'>
+            Real feedback from students who have improved their grades with Dripanomics Tutorials.
+          </p>
         </div>
-        <div className='max-w-[1400px] w-full m-auto py-6 px-4 relative group'>
-            
-            <div className='w-full h-full rounded-3xl bg-center bg-cover duration-500'>
-    
-                <div className='w-full flex flex-col items-center p-4 my-4 rounded-2xl border border-gray-100 shadow-sm bg-white'>
-                    <div className='flex flex-row justify-center items-center w-[450px] h-[450px] transition ease-in-out duration-1000'>
-                        <img className='rounded-xl object-scale-down w-[450px] h-[450px] shadow-sm' src={testimonialImages[currentIndex]} alt=''/>
-                    </div>
-                </div>
-    
+
+        {/* Carousel */}
+        <div 
+          className='relative group'
+          onMouseEnter={() => setIsAutoPlaying(false)}
+          onMouseLeave={() => setIsAutoPlaying(true)}
+        >
+          {/* Main Image Container */}
+          <div className='relative bg-muted rounded-2xl overflow-hidden shadow-soft'>
+            <div className='aspect-square max-w-lg mx-auto p-4'>
+              <img 
+                className='w-full h-full object-contain rounded-xl transition-opacity duration-500' 
+                src={testimonialImages[currentIndex]} 
+                alt={`Student testimonial ${currentIndex + 1}`}
+              />
             </div>
-    
-            <div onClick={prevSlide} className='block md:hidden md:group-hover:block absolute top-[50%] -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/10 hover:bg-black/30 transition-colors text-black cursor-pointer shadow-sm'>
-                <BsChevronCompactLeft size={30}/>
-            </div>
-    
-            <div onClick={nextSlide} className='block md:hidden md:group-hover:block absolute top-[50%] -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/10 hover:bg-black/30 transition-colors text-black cursor-pointer shadow-sm'>
-                <BsChevronCompactRight  size={30}/>
-            </div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className='absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-3 bg-card/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-card hover:shadow-medium transition-all duration-200 text-foreground'
+            aria-label="Previous testimonial"
+          >
+            <BsChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button 
+            onClick={nextSlide}
+            className='absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-3 bg-card/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-card hover:shadow-medium transition-all duration-200 text-foreground'
+            aria-label="Next testimonial"
+          >
+            <BsChevronRight className="w-5 h-5" />
+          </button>
         </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center items-center gap-2 mt-6">
+          {testimonialImages.slice(0, 10).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                currentIndex === index 
+                  ? 'bg-primary w-6' 
+                  : 'bg-border hover:bg-muted-foreground'
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+          {testimonialImages.length > 10 && (
+            <span className="text-xs text-muted-foreground ml-2">
+              +{testimonialImages.length - 10} more
+            </span>
+          )}
         </div>
-        
-      )
-    }
-    
-    export default Testimonials;
+
+        {/* Counter */}
+        <div className="text-center mt-4 text-sm text-muted-foreground">
+          {currentIndex + 1} / {testimonialImages.length}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Testimonials;
