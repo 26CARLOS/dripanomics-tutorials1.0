@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import { BsArrowRight } from 'react-icons/bs'
 import logo from '../assets/favicon.ico'
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,146 +23,119 @@ const Navbar = () => {
     setNav(true);
   }
 
-  const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/tutors', label: 'Tutors' },
-    { to: '/modules', label: 'Modules' },
-    { to: '/about', label: 'About' },
-    { to: '/contact', label: 'Contact' },
-  ];
+  const navLinkClass = ({ isActive }) => 
+    `px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg ${
+      isActive 
+        ? 'text-foreground bg-muted' 
+        : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+    }`;
 
   return (
-    <header className={`w-full fixed top-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? 'py-3 glass border-b border-border shadow-soft' 
-        : 'py-6 bg-transparent'
+    <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${
+      !nav
+        ? 'bg-card shadow-soft border-b border-border'
+        : scrolled 
+          ? 'bg-card/95 backdrop-blur-md shadow-soft border-b border-border' 
+          : 'bg-card/95 md:bg-transparent'
     }`}>
-      <div className='flex items-center justify-between max-w-7xl mx-auto px-6 lg:px-8'>
+      <div className='flex items-center justify-between h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 flex items-center justify-center bg-foreground rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
+          <div className="relative">
             <img 
               src={logo} 
-              alt="Dripanomics" 
-              className='w-8 h-8 object-contain brightness-0 invert'
+              alt="Dripanomics Tutorials logo" 
+              className='h-10 w-10 lg:h-12 lg:w-12 group-hover:scale-105 transition-transform duration-300'
             />
           </div>
-          <span className='font-bold text-xl lg:text-2xl text-foreground tracking-tight'>
+          <span className='font-display font-bold text-xl lg:text-2xl text-foreground tracking-tight'>
             Dripanomics
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className='hidden lg:flex items-center gap-1'>
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) => 
-                `relative px-5 py-2.5 text-sm font-medium transition-colors duration-200 ${
-                  isActive 
-                    ? 'text-foreground' 
-                    : 'text-muted-foreground hover:text-foreground'
-                }`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {link.label}
-                  {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-foreground rounded-full" />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
+        <nav className='hidden md:flex items-center gap-1'>
+          <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/tutors" className={navLinkClass}>Tutors</NavLink>
+          <NavLink to="/modules" className={navLinkClass}>Modules</NavLink>
+          <NavLink to="/about" className={navLinkClass}>About</NavLink>
+          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden md:block">
           <Link 
             to="/gettutor"
-            className="group flex items-center gap-2 px-6 py-3 bg-foreground text-background font-medium text-sm rounded-full hover:shadow-strong transition-all duration-300"
+            className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-primary-foreground font-semibold text-sm rounded-full hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-soft"
           >
-            <span>Get a Tutor</span>
-            <BsArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            Get a Tutor
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
           onClick={handleNav} 
-          className='lg:hidden p-3 rounded-xl hover:bg-muted transition-colors'
+          className='md:hidden p-2 rounded-lg hover:bg-muted transition-colors'
           aria-label={nav ? 'Open menu' : 'Close menu'}
         >
-          {!nav ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}
+          {!nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Navigation Overlay */}
-      <div 
-        className={`fixed inset-0 bg-foreground/20 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${
-          !nav ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={closeMobileNav}
-      />
-
-      {/* Mobile Navigation Panel */}
-      <div className={`fixed top-0 right-0 w-full max-w-sm h-full bg-card z-50 lg:hidden transition-transform duration-500 ease-smooth-out ${
-        !nav ? 'translate-x-0' : 'translate-x-full'
+      {/* Mobile Navigation */}
+      <div className={`fixed inset-0 bg-card z-50 transition-transform duration-300 ease-out ${
+        !nav ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
           {/* Mobile Header */}
-          <div className="flex items-center justify-between p-6 border-b border-border">
-            <span className='font-bold text-xl text-foreground tracking-tight'>
-              Menu
+          <div className="flex items-center justify-between h-20 px-4 border-b border-border">
+            <span className='font-display font-bold text-xl text-foreground'>
+              Dripanomics
             </span>
             <button 
               onClick={closeMobileNav}
-              className="p-2 rounded-xl hover:bg-muted transition-colors"
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Close menu"
             >
-              <AiOutlineClose size={22} />
+              <AiOutlineClose size={24} />
             </button>
           </div>
 
           {/* Mobile Links */}
-          <nav className='flex-1 overflow-y-auto p-6'>
-            <div className='space-y-2'>
-              {navLinks.map((link, index) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  onClick={closeMobileNav}
-                  className={({ isActive }) => 
-                    `flex items-center justify-between p-4 text-lg font-medium rounded-2xl transition-all duration-200 ${
-                      isActive 
-                        ? 'bg-foreground text-background' 
-                        : 'text-foreground hover:bg-muted'
-                    }`
-                  }
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  {link.label}
-                  <BsArrowRight className="w-5 h-5 opacity-50" />
-                </NavLink>
-              ))}
-            </div>
+          <nav className='flex flex-col p-4 gap-2'>
+            {[
+              { to: '/', label: 'Home' },
+              { to: '/tutors', label: 'Tutors' },
+              { to: '/modules', label: 'Modules' },
+              { to: '/about', label: 'About' },
+              { to: '/contact', label: 'Contact' },
+            ].map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={closeMobileNav}
+                className={({ isActive }) => 
+                  `px-4 py-3 text-lg font-medium rounded-lg transition-colors ${
+                    isActive 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'text-foreground hover:bg-muted'
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </nav>
 
           {/* Mobile CTA */}
-          <div className="p-6 border-t border-border">
+          <div className="mt-auto p-4 border-t border-border">
             <Link 
               to="/gettutor"
               onClick={closeMobileNav}
-              className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-foreground text-background font-semibold rounded-2xl hover:shadow-strong transition-all"
+              className="flex items-center justify-center w-full px-6 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 transition-opacity"
             >
               Get a Tutor
-              <BsArrowRight className="w-5 h-5" />
             </Link>
-            <p className="text-center text-sm text-muted-foreground mt-4">
-              Start your learning journey today
-            </p>
           </div>
         </div>
       </div>
