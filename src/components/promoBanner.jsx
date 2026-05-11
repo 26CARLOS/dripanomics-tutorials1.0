@@ -5,7 +5,7 @@ const PromoBanner = () => {
   return (
     <div className='flex flex-col justify-center w-full h-[65vh]  md:h-[95vh]  bg-black text-white text-center text-xs md:text-2xl'> 
         <h2 className='py-2 font-bold'>Introducing the future of learning</h2>
-        <h1 className='py-2 font-bold md:text-5xl'></h1>
+        <h1 className='py-2 font-bold md:text-5xl'>Dripanomics Grail</h1>
         <p className='py-2 font-thin'>We are happy to announce our brand new innovation.</p>
         <p className='py-2 font-thin'> Our new online learning system better known as the <span className='font-bold'>Dripanomics Grail</span> </p>
         <div className='flex flex-col lg:flex-row justify-between'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {BsPhone,} from 'react-icons/bs'
 import { HiOutlineMail } from "react-icons/hi";
-import {FaWhatsapp,FaInstagram, FaTelegram} from 'react-icons/fa'
+import {FaInstagram, FaTelegram} from 'react-icons/fa'
  
 const ContactUs = () => {
   return (
