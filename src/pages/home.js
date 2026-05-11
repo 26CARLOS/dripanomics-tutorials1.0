@@ -5,15 +5,17 @@ import Faqs from './faqs';
 import NewsLetter from "../components/newsLetter"
 import Howto from "../components/howto";
 import PromoBanner from '../components/promoBanner';
+import Testimonials from '../components/testimonials';
 
 function Home () {
   return (
     <>
       <Hero />
-      <PromoBanner/>
+      <PromoBanner />
       <One />
       <Howto />
-      <Faqs/>
+      <Testimonials />
+      <Faqs />
       <NewsLetter />
     </>
   )
