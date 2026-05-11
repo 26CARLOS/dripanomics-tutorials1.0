@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import NewsLetter from './newsLetter';
 
 const MailchimpFormContainer = props => {
-    const [email, setEmail] = useState('');
 
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add submit logic here
-    };
-
+    const postUrl=  `https://dripanomicstutorials.us17.list-manage.com/subscribe/post?u=f5a334f738078e23b5188557b&id=8e94edb610`;
     return (
     <div className='w-full py-16 text-white bg-black mt-8'>
         <form onSubmit={handleSubmit}>

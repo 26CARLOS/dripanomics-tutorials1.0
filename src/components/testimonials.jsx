@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { BsChevronLeft, BsChevronRight, BsQuote } from 'react-icons/bs';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import test1 from '../assets/testimonials/test1.jpg'
 import test2 from '../assets/testimonials/test2.jpg'
 import test3 from '../assets/testimonials/test3.jpg'
@@ -66,83 +66,80 @@ const Testimonials = () => {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section className='py-24 lg:py-32 bg-muted'>
-      <div className='max-w-6xl mx-auto px-6 lg:px-8'>
+    <section className='py-20 lg:py-28 bg-card'>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Section Header */}
-        <div className='max-w-3xl mx-auto text-center mb-16'>
-          <span className="inline-block text-sm font-semibold text-muted-foreground tracking-wider uppercase mb-4">
-            Success Stories
+        <div className='text-center mb-12'>
+          <span className="text-sm font-semibold text-muted-foreground tracking-wide uppercase">
+            Student Success
           </span>
-          <h2 className='text-display-md text-foreground'>
-            What Our Students
-            <span className='block text-muted-foreground'>Are Saying</span>
+          <h2 className='font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mt-3'>
+            What Our Students Say
           </h2>
-          <p className='text-muted-foreground mt-6 max-w-xl mx-auto text-lg'>
-            Real feedback from real students who transformed their academic journey with Dripanomics.
+          <p className='text-muted-foreground mt-4 max-w-xl mx-auto'>
+            Real feedback from students who have improved their grades with Dripanomics Tutorials.
           </p>
         </div>
 
         {/* Carousel */}
         <div 
-          className='relative'
+          className='relative group'
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Main Card */}
-          <div className='relative max-w-2xl mx-auto'>
-            {/* Quote decoration */}
-            <div className="absolute -top-6 left-6 lg:-top-8 lg:-left-8 w-16 h-16 bg-foreground rounded-2xl flex items-center justify-center z-10">
-              <BsQuote className="w-8 h-8 text-background rotate-180" />
-            </div>
-
-            {/* Image Container */}
-            <div className='relative bg-card rounded-3xl overflow-hidden shadow-strong border border-border'>
-              <div className='aspect-square sm:aspect-[4/3] lg:aspect-[16/10] p-6 lg:p-10'>
-                <img 
-                  key={currentIndex}
-                  className='w-full h-full object-contain rounded-2xl animate-fade-in' 
-                  src={testimonialImages[currentIndex]} 
-                  alt={`Student testimonial ${currentIndex + 1}`}
-                />
-              </div>
-            </div>
-
-            {/* Navigation Buttons */}
-            <button 
-              onClick={prevSlide}
-              className='absolute left-4 lg:-left-20 top-1/2 -translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 bg-card rounded-full shadow-medium border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 text-foreground'
-              aria-label="Previous testimonial"
-            >
-              <BsChevronLeft className="w-5 h-5" />
-            </button>
-
-            <button 
-              onClick={nextSlide}
-              className='absolute right-4 lg:-right-20 top-1/2 -translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 bg-card rounded-full shadow-medium border border-border flex items-center justify-center hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 text-foreground'
-              aria-label="Next testimonial"
-            >
-              <BsChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-8 max-w-md mx-auto">
-            <div className="h-1 bg-border rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-foreground rounded-full transition-all duration-300"
-                style={{ width: `${((currentIndex + 1) / testimonialImages.length) * 100}%` }}
+          {/* Main Image Container */}
+          <div className='relative bg-muted rounded-2xl overflow-hidden shadow-soft'>
+            <div className='aspect-square max-w-lg mx-auto p-4'>
+              <img 
+                className='w-full h-full object-contain rounded-xl transition-opacity duration-500' 
+                src={testimonialImages[currentIndex]} 
+                alt={`Student testimonial ${currentIndex + 1}`}
               />
             </div>
-            <div className="flex items-center justify-between mt-3 text-sm text-muted-foreground">
-              <span>{currentIndex + 1} of {testimonialImages.length}</span>
-              <button 
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className="hover:text-foreground transition-colors"
-              >
-                {isAutoPlaying ? 'Pause' : 'Play'}
-              </button>
-            </div>
           </div>
+
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className='absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-3 bg-card/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-card hover:shadow-medium transition-all duration-200 text-foreground'
+            aria-label="Previous testimonial"
+          >
+            <BsChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button 
+            onClick={nextSlide}
+            className='absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-3 bg-card/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-card hover:shadow-medium transition-all duration-200 text-foreground'
+            aria-label="Next testimonial"
+          >
+            <BsChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center items-center gap-2 mt-6">
+          {testimonialImages.slice(0, 10).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                currentIndex === index 
+                  ? 'bg-primary w-6' 
+                  : 'bg-border hover:bg-muted-foreground'
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+          {testimonialImages.length > 10 && (
+            <span className="text-xs text-muted-foreground ml-2">
+              +{testimonialImages.length - 10} more
+            </span>
+          )}
+        </div>
+
+        {/* Counter */}
+        <div className="text-center mt-4 text-sm text-muted-foreground">
+          {currentIndex + 1} / {testimonialImages.length}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import emailjs from 'emailjs-com';
-import { BsArrowRight, BsCheckCircle, BsPerson, BsEnvelope, BsPhone, BsBook, BsShieldCheck, BsClock } from 'react-icons/bs'
+import { BsArrowRight, BsCheckCircle, BsPerson, BsEnvelope, BsPhone, BsBook } from 'react-icons/bs'
 
 const GetTutorForm = () => {
   const [name, setName] = useState('');
@@ -60,17 +60,17 @@ const GetTutorForm = () => {
 
   if (isSuccess) {
     return (
-      <section className='py-24 lg:py-32 bg-background min-h-[80vh] flex items-center'>
-        <div className='max-w-lg mx-auto px-6 text-center'>
-          <div className='bg-card rounded-3xl border border-border p-10 lg:p-14'>
-            <div className='w-20 h-20 mx-auto bg-foreground rounded-2xl flex items-center justify-center mb-8'>
-              <BsCheckCircle className='w-10 h-10 text-background' />
+      <section className='py-20 lg:py-32 bg-background'>
+        <div className='max-w-lg mx-auto px-4 text-center'>
+          <div className='bg-card rounded-2xl border border-border p-8 sm:p-12'>
+            <div className='w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6'>
+              <BsCheckCircle className='w-8 h-8 text-green-600' />
             </div>
-            <h2 className='text-display-sm text-foreground'>
+            <h2 className='font-display font-bold text-2xl text-foreground'>
               Request Submitted!
             </h2>
-            <p className='mt-4 text-muted-foreground text-lg'>
-              Thank you for your interest. Our team will contact you within 24 hours to match you with the perfect tutor.
+            <p className='mt-4 text-muted-foreground'>
+              Thank you for your interest. Our team will contact you shortly to match you with the perfect tutor.
             </p>
           </div>
         </div>
@@ -79,164 +79,134 @@ const GetTutorForm = () => {
   }
 
   return (
-    <section className='py-24 lg:py-32 bg-background'>
-      <div className='max-w-5xl mx-auto px-6 lg:px-8'>
-        <div className='grid lg:grid-cols-5 gap-12 lg:gap-16'>
-          {/* Left Column - Info */}
-          <div className='lg:col-span-2'>
-            <span className="inline-block text-sm font-semibold text-muted-foreground tracking-wider uppercase mb-4">
-              Start Learning
-            </span>
-            <h1 className='text-display-md text-foreground'>
-              Get an Expert
-              <span className='block text-muted-foreground'>Tutor</span>
-            </h1>
-            <p className='mt-6 text-muted-foreground text-lg'>
-              Fill out the form and we&apos;ll match you with the perfect tutor for your needs.
-            </p>
+    <section className='py-20 lg:py-32 bg-background'>
+      <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:px-8'>
+        {/* Header */}
+        <div className='text-center mb-10'>
+          <span className="text-sm font-semibold text-muted-foreground tracking-wide uppercase">
+            Start Learning
+          </span>
+          <h1 className='font-display font-bold text-3xl sm:text-4xl text-foreground mt-3'>
+            Get an Experienced Tutor
+          </h1>
+          <p className='mt-4 text-muted-foreground'>
+            Fill out the form below and we will match you with the perfect tutor for your needs.
+          </p>
+        </div>
 
-            {/* Trust indicators */}
-            <div className='mt-10 space-y-4'>
-              <div className='flex items-center gap-4 text-foreground'>
-                <div className='w-12 h-12 flex items-center justify-center bg-muted rounded-xl'>
-                  <BsShieldCheck className='w-5 h-5' />
+        {/* Form Card */}
+        <div className='bg-card rounded-2xl border border-border p-6 sm:p-8 shadow-soft'>
+          <form className='space-y-6' onSubmit={handleSubmit}>
+            {/* Name Input */}
+            <div>
+              <label className='block text-sm font-medium text-foreground mb-2'>
+                Full Name
+              </label>
+              <div className='relative'>
+                <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                  <BsPerson className='w-5 h-5 text-muted-foreground' />
                 </div>
-                <div>
-                  <div className='font-semibold'>No Commitment</div>
-                  <div className='text-sm text-muted-foreground'>Free consultation</div>
-                </div>
-              </div>
-              <div className='flex items-center gap-4 text-foreground'>
-                <div className='w-12 h-12 flex items-center justify-center bg-muted rounded-xl'>
-                  <BsClock className='w-5 h-5' />
-                </div>
-                <div>
-                  <div className='font-semibold'>Fast Response</div>
-                  <div className='text-sm text-muted-foreground'>Reply within 24 hours</div>
-                </div>
-              </div>
-              <div className='flex items-center gap-4 text-foreground'>
-                <div className='w-12 h-12 flex items-center justify-center bg-muted rounded-xl'>
-                  <BsCheckCircle className='w-5 h-5' />
-                </div>
-                <div>
-                  <div className='font-semibold'>Expert Match</div>
-                  <div className='text-sm text-muted-foreground'>Personalized tutor pairing</div>
-                </div>
+                <input
+                  type="text"
+                  placeholder='Enter your full name'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className='w-full pl-12 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all'
+                />
               </div>
             </div>
-          </div>
 
-          {/* Right Column - Form */}
-          <div className='lg:col-span-3'>
-            <div className='bg-card rounded-3xl border border-border p-8 lg:p-10 shadow-soft'>
-              <form className='space-y-6' onSubmit={handleSubmit}>
-                {/* Name Input */}
-                <div>
-                  <label className='block text-sm font-semibold text-foreground mb-3'>
-                    Full Name
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
-                      <BsPerson className='w-5 h-5 text-muted-foreground' />
-                    </div>
-                    <input
-                      type="text"
-                      placeholder='Enter your full name'
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                      className='w-full pl-14 pr-5 py-4 bg-background border border-border rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground/30 transition-all'
-                    />
-                  </div>
+            {/* Email Input */}
+            <div>
+              <label className='block text-sm font-medium text-foreground mb-2'>
+                Email Address
+              </label>
+              <div className='relative'>
+                <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                  <BsEnvelope className='w-5 h-5 text-muted-foreground' />
                 </div>
+                <input
+                  type="email"
+                  placeholder='Enter your email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className='w-full pl-12 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all'
+                />
+              </div>
+            </div>
 
-                {/* Email Input */}
-                <div>
-                  <label className='block text-sm font-semibold text-foreground mb-3'>
-                    Email Address
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
-                      <BsEnvelope className='w-5 h-5 text-muted-foreground' />
-                    </div>
-                    <input
-                      type="email"
-                      placeholder='Enter your email'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className='w-full pl-14 pr-5 py-4 bg-background border border-border rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground/30 transition-all'
-                    />
-                  </div>
+            {/* Phone Input */}
+            <div>
+              <label className='block text-sm font-medium text-foreground mb-2'>
+                Phone Number
+              </label>
+              <div className='relative'>
+                <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                  <BsPhone className='w-5 h-5 text-muted-foreground' />
                 </div>
+                <input
+                  type="tel"
+                  placeholder='Enter your phone number'
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  className='w-full pl-12 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all'
+                />
+              </div>
+            </div>
 
-                {/* Phone Input */}
-                <div>
-                  <label className='block text-sm font-semibold text-foreground mb-3'>
-                    Phone Number
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
-                      <BsPhone className='w-5 h-5 text-muted-foreground' />
-                    </div>
-                    <input
-                      type="tel"
-                      placeholder='Enter your phone number'
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      required
-                      className='w-full pl-14 pr-5 py-4 bg-background border border-border rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground/30 transition-all'
-                    />
-                  </div>
+            {/* Module Select */}
+            <div>
+              <label className='block text-sm font-medium text-foreground mb-2'>
+                Select Module
+              </label>
+              <div className='relative'>
+                <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                  <BsBook className='w-5 h-5 text-muted-foreground' />
                 </div>
-
-                {/* Module Select */}
-                <div>
-                  <label className='block text-sm font-semibold text-foreground mb-3'>
-                    Select Module
-                  </label>
-                  <div className='relative'>
-                    <div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
-                      <BsBook className='w-5 h-5 text-muted-foreground' />
-                    </div>
-                    <select
-                      value={module}
-                      onChange={(e) => setModule(e.target.value)}
-                      required
-                      className='w-full pl-14 pr-5 py-4 bg-background border border-border rounded-2xl text-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground/30 transition-all appearance-none cursor-pointer'
-                    >
-                      <option value="">Select a module...</option>
-                      {moduleOptions.map((option, index) => (
-                        <option key={index} value={option}>{option}</option>
-                      ))}
-                    </select>
-                    {/* Custom dropdown arrow */}
-                    <div className='absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none'>
-                      <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className='group w-full flex items-center justify-center gap-3 px-8 py-5 bg-foreground text-background font-semibold rounded-2xl hover:shadow-strong disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 mt-8'
+                <select
+                  value={module}
+                  onChange={(e) => setModule(e.target.value)}
+                  required
+                  className='w-full pl-12 pr-4 py-3 bg-background border border-border rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all appearance-none cursor-pointer'
                 >
-                  {isSubmitting ? (
-                    <span>Submitting...</span>
-                  ) : (
-                    <>
-                      <span>Submit Request</span>
-                      <BsArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                    </>
-                  )}
-                </button>
-              </form>
+                  <option value="">Select a module...</option>
+                  {moduleOptions.map((option, index) => (
+                    <option key={index} value={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
             </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className='w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 group'
+            >
+              {isSubmitting ? (
+                <span>Submitting...</span>
+              ) : (
+                <>
+                  <span>Submit Request</span>
+                  <BsArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </>
+              )}
+            </button>
+          </form>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className='flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-muted-foreground'>
+          <div className='flex items-center gap-2'>
+            <BsCheckCircle className='w-4 h-4 text-green-600' />
+            <span>No commitment required</span>
+          </div>
+          <div className='flex items-center gap-2'>
+            <BsCheckCircle className='w-4 h-4 text-green-600' />
+            <span>Response within 24 hours</span>
           </div>
         </div>
       </div>
