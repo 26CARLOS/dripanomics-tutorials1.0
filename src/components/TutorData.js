@@ -1,21 +1,8 @@
-import Asonele from "../assets/Asonele.jpg";
-import Bongiwe from "../assets/Bongiwe.jpg";
-import Pierrette from "../assets/Pierrette.jpg";
-import Reitumetse from "../assets/Reitumetse.jpg";
-import Joachim from "../assets/Joachim.jpg";
+
 import Remofilwe from "../assets/Remofilwe.jpg";
-import Zandile from "../assets/Zandile.jpg";
-import Lindokuhle from "../assets/Lindokuhle.jpg";
-import Miesie from "../assets/Miesie.jpg";
-import Sphesihle from "../assets/Spesihle.jpg";
-import Rorisang from "../assets/Rorisang.jpg";
-import Lungile from "../assets/Lungile.jpg";
+
 import Koketso from "../assets/Koketso.jpg";
-import Nghwazi from "../assets/Nghwazi.jpg";
-import Zuko from "../assets/Zuko.jpg";
-import Lecy from "../assets/Lecy.jpg";
-import Amogelang from "../assets/Amogelang.jpg";
-import Thuli from '../assets/Thuli.jpg';
+
 
 const Tutors =[
     {profileImage:Remofilwe,
