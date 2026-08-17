@@ -12,8 +12,8 @@ const contactMethods = [
   {
     icon: BsTelegram,
     label: 'WhatsApp',
-    value: '+27 77 695 41002',
-    href: 'https://wa.me/277769541002',
+    value: '+27 77 695 4102',
+    href: 'https://wa.me/27776954102',
     description: 'Message us on WhatsApp',
   },
   {
